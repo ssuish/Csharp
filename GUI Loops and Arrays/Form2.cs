@@ -21,5 +21,17 @@ namespace GUI_Loops_and_Arrays
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 titleform = new Form1();
+            titleform.Show();
+        }
     }
 }
