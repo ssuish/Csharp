@@ -16,5 +16,10 @@ namespace GUI_Loops_and_Arrays
         {
             InitializeComponent();
         }
+
+        private void whileLoopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
