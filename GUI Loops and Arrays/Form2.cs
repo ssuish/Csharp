@@ -33,5 +33,50 @@ namespace GUI_Loops_and_Arrays
             Form1 titleform = new Form1();
             titleform.Show();
         }
+
+        private void foregroundToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void backgroundToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void forLoopToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void whileLoopToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doWhileLoopToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void foreachLoopToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void singleDimensionalToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void twoDimensionalToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void multidimensionalToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

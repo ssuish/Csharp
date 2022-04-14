@@ -68,8 +68,13 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -209,12 +214,14 @@
             this.foregroundToolStripMenuItem.Name = "foregroundToolStripMenuItem";
             this.foregroundToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.foregroundToolStripMenuItem.Text = "Foreground Text";
+            this.foregroundToolStripMenuItem.Click += new System.EventHandler(this.foregroundToolStripMenuItem_Click);
             // 
             // backgroundToolStripMenuItem
             // 
             this.backgroundToolStripMenuItem.Name = "backgroundToolStripMenuItem";
             this.backgroundToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.backgroundToolStripMenuItem.Text = "Background Text";
+            this.backgroundToolStripMenuItem.Click += new System.EventHandler(this.backgroundToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -241,24 +248,28 @@
             this.forLoopToolStripMenuItem1.Name = "forLoopToolStripMenuItem1";
             this.forLoopToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
             this.forLoopToolStripMenuItem1.Text = "For Loop";
+            this.forLoopToolStripMenuItem1.Click += new System.EventHandler(this.forLoopToolStripMenuItem1_Click);
             // 
             // whileLoopToolStripMenuItem1
             // 
             this.whileLoopToolStripMenuItem1.Name = "whileLoopToolStripMenuItem1";
             this.whileLoopToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
             this.whileLoopToolStripMenuItem1.Text = "While Loop";
+            this.whileLoopToolStripMenuItem1.Click += new System.EventHandler(this.whileLoopToolStripMenuItem1_Click);
             // 
             // doWhileLoopToolStripMenuItem1
             // 
             this.doWhileLoopToolStripMenuItem1.Name = "doWhileLoopToolStripMenuItem1";
             this.doWhileLoopToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
             this.doWhileLoopToolStripMenuItem1.Text = "Do While Loop";
+            this.doWhileLoopToolStripMenuItem1.Click += new System.EventHandler(this.doWhileLoopToolStripMenuItem1_Click);
             // 
             // foreachLoopToolStripMenuItem1
             // 
             this.foreachLoopToolStripMenuItem1.Name = "foreachLoopToolStripMenuItem1";
             this.foreachLoopToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
             this.foreachLoopToolStripMenuItem1.Text = "Foreach Loop";
+            this.foreachLoopToolStripMenuItem1.Click += new System.EventHandler(this.foreachLoopToolStripMenuItem1_Click);
             // 
             // helpArraysToolStripMenuItem
             // 
@@ -275,18 +286,21 @@
             this.singleDimensionalToolStripMenuItem1.Name = "singleDimensionalToolStripMenuItem1";
             this.singleDimensionalToolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
             this.singleDimensionalToolStripMenuItem1.Text = "Single Dimensional";
+            this.singleDimensionalToolStripMenuItem1.Click += new System.EventHandler(this.singleDimensionalToolStripMenuItem1_Click);
             // 
             // twoDimensionalToolStripMenuItem1
             // 
             this.twoDimensionalToolStripMenuItem1.Name = "twoDimensionalToolStripMenuItem1";
             this.twoDimensionalToolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
             this.twoDimensionalToolStripMenuItem1.Text = "Two Dimensional";
+            this.twoDimensionalToolStripMenuItem1.Click += new System.EventHandler(this.twoDimensionalToolStripMenuItem1_Click);
             // 
             // multidimensionalToolStripMenuItem1
             // 
             this.multidimensionalToolStripMenuItem1.Name = "multidimensionalToolStripMenuItem1";
             this.multidimensionalToolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
             this.multidimensionalToolStripMenuItem1.Text = "Multidimensional";
+            this.multidimensionalToolStripMenuItem1.Click += new System.EventHandler(this.multidimensionalToolStripMenuItem1_Click);
             // 
             // panel1
             // 
@@ -401,11 +415,43 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.tabControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(194, 24);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(490, 437);
             this.panel2.TabIndex = 3;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(490, 437);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(482, 406);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Getting Started";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(482, 406);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Examples";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
@@ -425,6 +471,8 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,5 +519,8 @@
         private Button button5;
         private Button button2;
         private Button button1;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
     }
 }
