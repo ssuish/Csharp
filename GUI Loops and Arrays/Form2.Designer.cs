@@ -44,7 +44,7 @@
             this.changeThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lightThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.darkThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cyberpunkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.draculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.foregroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,12 +69,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage1GettingStarted = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage1Examples = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1GettingStarted.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -177,28 +179,31 @@
             this.changeThemeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lightThemeToolStripMenuItem,
             this.darkThemeToolStripMenuItem,
-            this.cyberpunkToolStripMenuItem});
+            this.draculaToolStripMenuItem});
             this.changeThemeToolStripMenuItem.Name = "changeThemeToolStripMenuItem";
-            this.changeThemeToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.changeThemeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changeThemeToolStripMenuItem.Text = "Change Theme";
             // 
             // lightThemeToolStripMenuItem
             // 
             this.lightThemeToolStripMenuItem.Name = "lightThemeToolStripMenuItem";
-            this.lightThemeToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.lightThemeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lightThemeToolStripMenuItem.Text = "Default - Light";
+            this.lightThemeToolStripMenuItem.Click += new System.EventHandler(this.lightThemeToolStripMenuItem_Click);
             // 
             // darkThemeToolStripMenuItem
             // 
             this.darkThemeToolStripMenuItem.Name = "darkThemeToolStripMenuItem";
-            this.darkThemeToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.darkThemeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.darkThemeToolStripMenuItem.Text = "Dark";
+            this.darkThemeToolStripMenuItem.Click += new System.EventHandler(this.darkThemeToolStripMenuItem_Click);
             // 
-            // cyberpunkToolStripMenuItem
+            // draculaToolStripMenuItem
             // 
-            this.cyberpunkToolStripMenuItem.Name = "cyberpunkToolStripMenuItem";
-            this.cyberpunkToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.cyberpunkToolStripMenuItem.Text = "Cyberpunk";
+            this.draculaToolStripMenuItem.Name = "draculaToolStripMenuItem";
+            this.draculaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.draculaToolStripMenuItem.Text = "Dracula";
+            this.draculaToolStripMenuItem.Click += new System.EventHandler(this.draculaToolStripMenuItem_Click);
             // 
             // changeColorToolStripMenuItem
             // 
@@ -206,7 +211,7 @@
             this.foregroundToolStripMenuItem,
             this.backgroundToolStripMenuItem});
             this.changeColorToolStripMenuItem.Name = "changeColorToolStripMenuItem";
-            this.changeColorToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.changeColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changeColorToolStripMenuItem.Text = "Change Color ";
             // 
             // foregroundToolStripMenuItem
@@ -424,8 +429,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1GettingStarted);
+            this.tabControl1.Controls.Add(this.tabPage1Examples);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -433,25 +438,36 @@
             this.tabControl1.Size = new System.Drawing.Size(490, 437);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tabPage1GettingStarted
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(482, 406);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Getting Started";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1GettingStarted.Controls.Add(this.label4);
+            this.tabPage1GettingStarted.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1GettingStarted.Name = "tabPage1GettingStarted";
+            this.tabPage1GettingStarted.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1GettingStarted.Size = new System.Drawing.Size(482, 406);
+            this.tabPage1GettingStarted.TabIndex = 0;
+            this.tabPage1GettingStarted.Text = "Getting Started";
+            this.tabPage1GettingStarted.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // label4
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(482, 406);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Examples";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(28, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 37);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Sample";
+            // 
+            // tabPage1Examples
+            // 
+            this.tabPage1Examples.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1Examples.Name = "tabPage1Examples";
+            this.tabPage1Examples.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1Examples.Size = new System.Drawing.Size(482, 409);
+            this.tabPage1Examples.TabIndex = 1;
+            this.tabPage1Examples.Text = "Examples";
+            this.tabPage1Examples.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
@@ -473,6 +489,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1GettingStarted.ResumeLayout(false);
+            this.tabPage1GettingStarted.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,7 +520,7 @@
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem lightThemeToolStripMenuItem;
         private ToolStripMenuItem darkThemeToolStripMenuItem;
-        private ToolStripMenuItem cyberpunkToolStripMenuItem;
+        private ToolStripMenuItem draculaToolStripMenuItem;
         private ToolStripMenuItem forLoopToolStripMenuItem1;
         private ToolStripMenuItem whileLoopToolStripMenuItem1;
         private ToolStripMenuItem doWhileLoopToolStripMenuItem1;
@@ -520,7 +538,8 @@
         private Button button2;
         private Button button1;
         private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
+        private TabPage tabPage1GettingStarted;
+        private TabPage tabPage1Examples;
+        private Label label4;
     }
 }
