@@ -33,7 +33,8 @@ namespace GUI_Loops_and_Arrays
                 tabPageHome.ForeColor = forecolor.Color;
                 tabPageExamples.ForeColor = forecolor.Color;
             }
-;        }
+            walkthroughEventHappened(checkBoxUI);
+            ;        }
 
         private void backgroundToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -44,6 +45,7 @@ namespace GUI_Loops_and_Arrays
                 tabPageHome.BackColor = backcolor.Color;
                 tabPageExamples.BackColor = backcolor.Color;
             }
+            walkthroughEventHappened(checkBoxUI);
         }
 
         private void lightThemeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +54,7 @@ namespace GUI_Loops_and_Arrays
             tabPageHome.ForeColor = Color.Black;
             tabPageExamples.BackColor = Color.White;
             tabPageHome.BackColor = Color.White;
+            walkthroughEventHappened(checkBoxUI);
         }
 
         private void darkThemeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,6 +63,7 @@ namespace GUI_Loops_and_Arrays
             tabPageHome.ForeColor = Color.White;
             tabPageExamples.BackColor = Color.FromArgb(40, 44, 52);
             tabPageHome.BackColor = Color.FromArgb(40, 44, 52);
+            walkthroughEventHappened(checkBoxUI);
         }
 
         private void draculaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,16 +72,7 @@ namespace GUI_Loops_and_Arrays
             tabPageHome.ForeColor = Color.FromArgb(180, 120, 206);
             tabPageExamples.BackColor = Color.FromArgb(40, 44, 52);
             tabPageHome.BackColor = Color.FromArgb(40, 44, 52);
-        }
-
-        private void walkthroughEventHappened(CheckBox checkbox)
-        {
-            checkbox.CheckState = CheckState.Checked; 
-        }
-
-        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Sample");
+            walkthroughEventHappened(checkBoxUI);
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
@@ -89,13 +84,39 @@ namespace GUI_Loops_and_Arrays
             checkBoxUI.CheckState = CheckState.Unchecked;
         }
 
+        private void walkthroughEventHappened(CheckBox checkbox)
+        {
+            checkbox.CheckState = CheckState.Checked;
+        }
+
+        private void forloopCode()
+        {
+            labelExampleTitle.Text = "For Loop \nExample";
+            labelDescription.Text = "All odd numbers from 1-20.";
+            int oddNum = 0;
+            for (int i = 0; i <= 20; i++)
+            {
+                if (oddNum % 2 != 0)
+                {
+                    listBoxShowOutput.Items.Add(oddNum + " is odd number");
+                }
+                oddNum++;
+                listBoxIntNo.Items.Add("No. of interations: " + i);
+            }
+        }
+
         private void forLoopToolStripMenuItemExample_Click(object sender, EventArgs e)
         {
             walkthroughEventHappened(checkBoxMS);
+            forloopCode();
+            tabControl.SelectedTab = tabPageExamples;
         }
 
-       
-
-
+        private void forLoopsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            walkthroughEventHappened(checkBoxCMS);
+            forloopCode();
+            tabControl.SelectedTab = tabPageExamples;
+        }
     }
 }
