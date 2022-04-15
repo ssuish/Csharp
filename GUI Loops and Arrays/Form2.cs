@@ -80,39 +80,14 @@ namespace GUI_Loops_and_Arrays
             tabPageHome.BackColor = Color.FromArgb(40, 44, 52);
         }
 
-        private void forLoopToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void walkthroughEventHappened(CheckBox checkbox)
         {
-
+            checkbox.CheckState = CheckState.Checked; 
         }
 
-        private void whileLoopToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void forLoopToolStripMenuItemExample_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void doWhileLoopToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void foreachLoopToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void singleDimensionalToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void twoDimensionalToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void multidimensionalToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
+            walkthroughEventHappened(checkBoxMS);
         }
     }
 }
