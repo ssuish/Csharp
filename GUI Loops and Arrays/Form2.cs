@@ -89,5 +89,10 @@ namespace GUI_Loops_and_Arrays
         {
             walkthroughEventHappened(checkBoxMS);
         }
+
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sample");
+        }
     }
 }
