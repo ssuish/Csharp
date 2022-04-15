@@ -10,7 +10,7 @@ namespace GUI_Loops_and_Arrays
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 main = new Form2();
+            FormMain main = new FormMain();
             main.Show();
         }
 

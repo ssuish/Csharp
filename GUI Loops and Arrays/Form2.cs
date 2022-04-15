@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI_Loops_and_Arrays
 {
-    public partial class Form2 : Form
+    public partial class FormMain : Form
     {
-        public Form2()
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace GUI_Loops_and_Arrays
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 titleform = new Form1();
+            FormTitle titleform = new FormTitle();
             titleform.Show();
         }
 
@@ -80,11 +80,22 @@ namespace GUI_Loops_and_Arrays
             MessageBox.Show("Sample");
         }
 
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            checkBoxCMS.CheckState = CheckState.Unchecked;
+            checkBoxHelp.CheckState = CheckState.Unchecked;
+            checkBoxHome.CheckState = CheckState.Unchecked;
+            checkBoxMS.CheckState = CheckState.Unchecked;
+            checkBoxUI.CheckState = CheckState.Unchecked;
+        }
+
         private void forLoopToolStripMenuItemExample_Click(object sender, EventArgs e)
         {
             walkthroughEventHappened(checkBoxMS);
         }
 
-        
+       
+
+
     }
 }
