@@ -68,15 +68,34 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1GettingStarted = new System.Windows.Forms.TabPage();
+            this.tabPageHome = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
-            this.tabPage1Examples = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabPageExamples = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1GettingStarted.SuspendLayout();
+            this.tabPageHome.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -181,27 +200,27 @@
             this.darkThemeToolStripMenuItem,
             this.draculaToolStripMenuItem});
             this.changeThemeToolStripMenuItem.Name = "changeThemeToolStripMenuItem";
-            this.changeThemeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changeThemeToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.changeThemeToolStripMenuItem.Text = "Change Theme";
             // 
             // lightThemeToolStripMenuItem
             // 
             this.lightThemeToolStripMenuItem.Name = "lightThemeToolStripMenuItem";
-            this.lightThemeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lightThemeToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.lightThemeToolStripMenuItem.Text = "Default - Light";
             this.lightThemeToolStripMenuItem.Click += new System.EventHandler(this.lightThemeToolStripMenuItem_Click);
             // 
             // darkThemeToolStripMenuItem
             // 
             this.darkThemeToolStripMenuItem.Name = "darkThemeToolStripMenuItem";
-            this.darkThemeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.darkThemeToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.darkThemeToolStripMenuItem.Text = "Dark";
             this.darkThemeToolStripMenuItem.Click += new System.EventHandler(this.darkThemeToolStripMenuItem_Click);
             // 
             // draculaToolStripMenuItem
             // 
             this.draculaToolStripMenuItem.Name = "draculaToolStripMenuItem";
-            this.draculaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.draculaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.draculaToolStripMenuItem.Text = "Dracula";
             this.draculaToolStripMenuItem.Click += new System.EventHandler(this.draculaToolStripMenuItem_Click);
             // 
@@ -211,7 +230,7 @@
             this.foregroundToolStripMenuItem,
             this.backgroundToolStripMenuItem});
             this.changeColorToolStripMenuItem.Name = "changeColorToolStripMenuItem";
-            this.changeColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changeColorToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.changeColorToolStripMenuItem.Text = "Change Color ";
             // 
             // foregroundToolStripMenuItem
@@ -420,54 +439,255 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Controls.Add(this.tabControl);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(194, 24);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(490, 437);
             this.panel2.TabIndex = 3;
             // 
-            // tabControl1
+            // tabPageHome
             // 
-            this.tabControl1.Controls.Add(this.tabPage1GettingStarted);
-            this.tabControl1.Controls.Add(this.tabPage1Examples);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(490, 437);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage1GettingStarted
-            // 
-            this.tabPage1GettingStarted.Controls.Add(this.label4);
-            this.tabPage1GettingStarted.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1GettingStarted.Name = "tabPage1GettingStarted";
-            this.tabPage1GettingStarted.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1GettingStarted.Size = new System.Drawing.Size(482, 406);
-            this.tabPage1GettingStarted.TabIndex = 0;
-            this.tabPage1GettingStarted.Text = "Getting Started";
-            this.tabPage1GettingStarted.UseVisualStyleBackColor = true;
+            this.tabPageHome.Controls.Add(this.label11);
+            this.tabPageHome.Controls.Add(this.label10);
+            this.tabPageHome.Controls.Add(this.label9);
+            this.tabPageHome.Controls.Add(this.label8);
+            this.tabPageHome.Controls.Add(this.label7);
+            this.tabPageHome.Controls.Add(this.button10);
+            this.tabPageHome.Controls.Add(this.button9);
+            this.tabPageHome.Controls.Add(this.button6);
+            this.tabPageHome.Controls.Add(this.button7);
+            this.tabPageHome.Controls.Add(this.button8);
+            this.tabPageHome.Controls.Add(this.groupBox1);
+            this.tabPageHome.Controls.Add(this.label5);
+            this.tabPageHome.Controls.Add(this.label4);
+            this.tabPageHome.Location = new System.Drawing.Point(4, 27);
+            this.tabPageHome.Name = "tabPageHome";
+            this.tabPageHome.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageHome.Size = new System.Drawing.Size(482, 406);
+            this.tabPageHome.TabIndex = 0;
+            this.tabPageHome.Text = "Home";
+            this.tabPageHome.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(28, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 37);
+            this.label4.Size = new System.Drawing.Size(305, 37);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Sample";
+            this.label4.Text = "Welcome to MyApp!";
             // 
-            // tabPage1Examples
+            // label5
             // 
-            this.tabPage1Examples.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1Examples.Name = "tabPage1Examples";
-            this.tabPage1Examples.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1Examples.Size = new System.Drawing.Size(482, 409);
-            this.tabPage1Examples.TabIndex = 1;
-            this.tabPage1Examples.Text = "Examples";
-            this.tabPage1Examples.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(40, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(263, 18);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Loops and Arrays tutorials walkthrough.";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkBox5);
+            this.groupBox1.Controls.Add(this.checkBox4);
+            this.groupBox1.Controls.Add(this.checkBox3);
+            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Location = new System.Drawing.Point(31, 116);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(293, 250);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(6, 46);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(222, 22);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Open examples in menu strip.";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(6, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 22);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Get started";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(6, 74);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(266, 22);
+            this.checkBox2.TabIndex = 13;
+            this.checkBox2.Text = "Try it out again in context menu strip.";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(6, 102);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(172, 22);
+            this.checkBox3.TabIndex = 14;
+            this.checkBox3.Text = "Edit the user interface.\r\n";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(6, 130);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(182, 22);
+            this.checkBox4.TabIndex = 15;
+            this.checkBox4.Text = "Check out help module.\r\n";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(6, 158);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(135, 22);
+            this.checkBox5.TabIndex = 16;
+            this.checkBox5.Text = "Return to Home.\r\n";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(330, 122);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(40, 44);
+            this.button8.TabIndex = 9;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(330, 172);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(40, 44);
+            this.button7.TabIndex = 10;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(330, 222);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(40, 44);
+            this.button6.TabIndex = 11;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(330, 272);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(40, 44);
+            this.button9.TabIndex = 9;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(330, 322);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(40, 44);
+            this.button10.TabIndex = 9;
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(376, 122);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 36);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "To Loops\r\nExamples\r\n";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(376, 176);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 36);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "To Array\r\nExamples\r\n";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(376, 225);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 36);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "To Help\r\nModule";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(376, 275);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 36);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Return to\r\nHome";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(376, 322);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 36);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Exit to\r\nTitle Page";
+            // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.tabPageHome);
+            this.tabControl.Controls.Add(this.tabPageExamples);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(490, 437);
+            this.tabControl.TabIndex = 0;
+            // 
+            // tabPageExamples
+            // 
+            this.tabPageExamples.Location = new System.Drawing.Point(4, 27);
+            this.tabPageExamples.Name = "tabPageExamples";
+            this.tabPageExamples.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageExamples.Size = new System.Drawing.Size(482, 406);
+            this.tabPageExamples.TabIndex = 1;
+            this.tabPageExamples.Text = "Examples";
+            this.tabPageExamples.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
@@ -488,9 +708,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1GettingStarted.ResumeLayout(false);
-            this.tabPage1GettingStarted.PerformLayout();
+            this.tabPageHome.ResumeLayout(false);
+            this.tabPageHome.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,9 +759,27 @@
         private Button button5;
         private Button button2;
         private Button button1;
-        private TabControl tabControl1;
-        private TabPage tabPage1GettingStarted;
-        private TabPage tabPage1Examples;
+        private TabControl tabControl;
+        private TabPage tabPageHome;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Button button10;
+        private Button button9;
+        private Button button6;
+        private Button button7;
+        private Button button8;
+        private GroupBox groupBox1;
+        private CheckBox checkBox5;
+        private CheckBox checkBox4;
+        private CheckBox checkBox3;
+        private CheckBox checkBox2;
+        private Label label6;
+        private CheckBox checkBox1;
+        private Label label5;
         private Label label4;
+        private TabPage tabPageExamples;
     }
 }

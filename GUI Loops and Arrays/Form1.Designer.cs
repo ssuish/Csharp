@@ -107,9 +107,9 @@
             this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(22, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 48);
+            this.label1.Size = new System.Drawing.Size(294, 48);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Tutorial";
+            this.label1.Text = "MyApp Tutorial";
             // 
             // button1
             // 
