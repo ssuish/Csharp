@@ -66,7 +66,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl = new System.Windows.Forms.TabControl();
@@ -82,6 +82,8 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             this.checkBoxHome = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,16 +95,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPageExamples = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.button11 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -159,7 +159,6 @@
             this.whileLoopToolStripMenuItemExample.Name = "whileLoopToolStripMenuItemExample";
             this.whileLoopToolStripMenuItemExample.Size = new System.Drawing.Size(163, 22);
             this.whileLoopToolStripMenuItemExample.Text = "While Loop";
-            this.whileLoopToolStripMenuItemExample.Click += new System.EventHandler(this.whileLoopToolStripMenuItem_Click);
             // 
             // doWhileLoopToolStripMenuItemExample
             // 
@@ -345,7 +344,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.buttonExit);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -420,19 +419,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Loops";
             // 
-            // button4
+            // buttonExit
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(116, 365);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 60);
-            this.button4.TabIndex = 3;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonExit.BackgroundImage")));
+            this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Location = new System.Drawing.Point(116, 365);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(60, 60);
+            this.buttonExit.TabIndex = 3;
+            this.buttonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // button3
             // 
@@ -445,7 +444,6 @@
             this.button3.Size = new System.Drawing.Size(60, 60);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 
@@ -612,6 +610,27 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(38, 219);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(103, 18);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "Reset Progress";
+            // 
+            // button11
+            // 
+            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Location = new System.Drawing.Point(6, 216);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(25, 25);
+            this.button11.TabIndex = 17;
+            this.button11.UseVisualStyleBackColor = true;
+            // 
             // checkBoxHome
             // 
             this.checkBoxHome.AutoSize = true;
@@ -726,6 +745,59 @@
             this.tabPageExamples.Text = "Examples";
             this.tabPageExamples.UseVisualStyleBackColor = true;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(251, 38);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 22);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Output";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(28, 193);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(217, 182);
+            this.textBox1.TabIndex = 12;
+            this.textBox1.Text = "// Codes";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(28, 159);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 22);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Code";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(28, 26);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(135, 74);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Loops\r\nExample";
+            // 
+            // listBox1
+            // 
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 18;
+            this.listBox1.Items.AddRange(new object[] {
+            "Data"});
+            this.listBox1.Location = new System.Drawing.Point(251, 67);
+            this.listBox1.MultiColumn = true;
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(200, 308);
+            this.listBox1.TabIndex = 0;
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -739,85 +811,14 @@
             this.fileToolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
             this.fileToolStripMenuItem1.Text = "Sample";
             // 
-            // button11
-            // 
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(6, 216);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(25, 25);
-            this.button11.TabIndex = 17;
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(38, 219);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(103, 18);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "Reset Progress";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
-            this.listBox1.Items.AddRange(new object[] {
-            "Data"});
-            this.listBox1.Location = new System.Drawing.Point(251, 67);
-            this.listBox1.MultiColumn = true;
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(200, 310);
-            this.listBox1.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(28, 26);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(135, 74);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Loops\r\nExample";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(56, 110);
+            this.label14.Location = new System.Drawing.Point(28, 128);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 18);
+            this.label14.Size = new System.Drawing.Size(92, 18);
             this.label14.TabIndex = 10;
-            this.label14.Text = "Description";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(28, 159);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 22);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Code";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(28, 193);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 184);
-            this.textBox1.TabIndex = 12;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(251, 38);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(71, 22);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "Output";
+            this.label14.Text = "Loop n times";
             // 
             // Form2
             // 
@@ -886,7 +887,7 @@
         private ToolStripMenuItem singleDimensionalToolStripMenuItem1;
         private ToolStripMenuItem twoDimensionalToolStripMenuItem1;
         private ToolStripMenuItem multidimensionalToolStripMenuItem1;
-        private Button button4;
+        private Button buttonExit;
         private Button button3;
         private Label label3;
         private Label label2;
@@ -925,8 +926,8 @@
         private Label label16;
         private TextBox textBox1;
         private Label label15;
-        private Label label14;
         private Label label13;
         private ListBox listBox1;
+        private Label label14;
     }
 }

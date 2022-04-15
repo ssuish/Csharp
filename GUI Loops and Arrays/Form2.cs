@@ -17,17 +17,7 @@ namespace GUI_Loops_and_Arrays
             InitializeComponent();
         }
 
-        private void whileLoopToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 titleform = new Form1();
@@ -85,14 +75,16 @@ namespace GUI_Loops_and_Arrays
             checkbox.CheckState = CheckState.Checked; 
         }
 
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sample");
+        }
+
         private void forLoopToolStripMenuItemExample_Click(object sender, EventArgs e)
         {
             walkthroughEventHappened(checkBoxMS);
         }
 
-        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Sample");
-        }
+        
     }
 }
