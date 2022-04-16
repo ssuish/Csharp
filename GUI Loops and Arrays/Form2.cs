@@ -85,7 +85,6 @@
         {
             checkBoxCMS.CheckState = CheckState.Unchecked;
             checkBoxHelp.CheckState = CheckState.Unchecked;
-            checkBoxHome.CheckState = CheckState.Unchecked;
             checkBoxMS.CheckState = CheckState.Unchecked;
             checkBoxUI.CheckState = CheckState.Unchecked;
         }
@@ -324,6 +323,145 @@
             walkthroughEventHappened(checkBoxCMS);
             multiDimArrCode();
             tabControl.SelectedTab = tabPageExamples;
+        }
+
+        private void forLoopHelp()
+        {
+            string cap = "What is For Loop?";
+            string msg = "It executes a sequence of statements multiple times" +
+                "\nand abbreviates the code that manages the loop variable.";
+            MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void whileLoopHelp()
+        {
+            string cap = "What is While Loop?";
+            string msg = "It repeats a statement or a group of statements while a given condition" +
+                "is true.\nIt tests the condition before executing the loop body.";
+            MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void doWhileLoopHelp()
+        {
+            string cap = "What is Do While Loop?";
+            string msg = "It is similar to a while statement, except that it tests" +
+                "\nthe condition at the end of the loop body";
+            MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void foreachLoopHelp()
+        {
+            string cap = "What is Foreach Loop?";
+            string msg = "Is used to iterate through an array.";
+            MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void singleDimArrHelp()
+        {
+            string cap = "What is Single/One Dimensional Array?";
+            string msg = "The simplest type of array that contains only one row for storing data.";
+            MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void twoDimArrHelp()
+        {
+            string cap = "What is Two Dimensional Array?";
+            string msg = "A two-dimensional array consists of single-dimensional arrays as its elements." +
+                "\nIt can be represented as a table with a specific number of rows and columns.";
+            MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void multiDimArrHelp()
+        {
+            string cap = "What is Multidimensional Array?";
+            string msg = "A multidimensional array can have more than one dimension as its elements." +
+                "\nIt can up to 32 dimensions of array.";
+            MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void forLoopToolStripMenuItemHelp_Click(object sender, EventArgs e)
+        {
+            forLoopHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void whileLoopToolStripMenuItemHelp_Click(object sender, EventArgs e)
+        {
+            whileLoopHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void doWhileLoopToolStripMenuItemHelp_Click(object sender, EventArgs e)
+        {
+            doWhileLoopHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void foreachLoopToolStripMenuItemHelp_Click(object sender, EventArgs e)
+        {
+            foreachLoopHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void singleDimensionalToolStripMenuItemHelp_Click(object sender, EventArgs e)
+        {
+            singleDimArrHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void twoDimensionalToolStripMenuItemHelp_Click(object sender, EventArgs e)
+        {
+            twoDimArrHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void multidimensionalToolStripMenuItemHelp_Click(object sender, EventArgs e)
+        {
+            multiDimArrHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void forLoopsToolStripMenuItemHelpContext_Click(object sender, EventArgs e)
+        {
+
+            forLoopHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void whileLoopsToolStripMenuItemHelpContext_Click(object sender, EventArgs e)
+        {
+            whileLoopHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void doWhileLoopsToolStripMenuItemHelpContext_Click(object sender, EventArgs e)
+        {
+            doWhileLoopHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void foreachLoopsToolStripMenuItemHelpContext_Click(object sender, EventArgs e)
+        {
+            foreachLoopHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void singleDimensionalToolStripMenuItemHelpContext_Click(object sender, EventArgs e)
+        {
+            singleDimArrHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void twoDimensionalToolStripMenuItemHelpContext_Click(object sender, EventArgs e)
+        {
+            twoDimArrHelp();
+            walkthroughEventHappened(checkBoxHelp);
+        }
+
+        private void multidimensionalToolStripMenuItemHelpContext_Click(object sender, EventArgs e)
+        {
+            multiDimArrHelp();
+            walkthroughEventHappened(checkBoxHelp);
         }
     }
 }
