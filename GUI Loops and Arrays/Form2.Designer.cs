@@ -32,15 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sampleLoopsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sampleLoopsToolStripMenuItemExample = new System.Windows.Forms.ToolStripMenuItem();
             this.forLoopToolStripMenuItemExample = new System.Windows.Forms.ToolStripMenuItem();
             this.whileLoopToolStripMenuItemExample = new System.Windows.Forms.ToolStripMenuItem();
             this.doWhileLoopToolStripMenuItemExample = new System.Windows.Forms.ToolStripMenuItem();
             this.foreachLoopToolStripMenuItemExample = new System.Windows.Forms.ToolStripMenuItem();
-            this.sampleArraysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.singleDimensionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.twoDimensionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.multidimensionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sampleArraysToolStripMenuItemExample = new System.Windows.Forms.ToolStripMenuItem();
+            this.singleDimensionalToolStripMenuItemExample = new System.Windows.Forms.ToolStripMenuItem();
+            this.twoDimensionalToolStripMenuItemExample = new System.Windows.Forms.ToolStripMenuItem();
+            this.multidimensionalToolStripMenuItemExample = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lightThemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,15 +110,15 @@
             this.labelExampleTitle = new System.Windows.Forms.Label();
             this.listBoxShowOutput = new System.Windows.Forms.ListBox();
             this.contextMenuStripFile = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.forLoopsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.whileLoopsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.doWhileLoopsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.foreachLoopsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showArraysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.singleDimensionalToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.twoDimensionalToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.multidimensionalToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileToolStripMenuItemContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.forLoopsToolStripMenuItemContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.whileLoopsToolStripMenuItemContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.doWhileLoopsToolStripMenuItemContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.foreachLoopsToolStripMenuItemContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.showArraysToolStripMenuItemContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.singleDimensionalToolStripMenuItemContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.twoDimensionalToolStripMenuItemContext = new System.Windows.Forms.ToolStripMenuItem();
+            this.multidimensionalToolStripMenuItemContext = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -146,22 +146,22 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sampleLoopsToolStripMenuItem,
-            this.sampleArraysToolStripMenuItem});
+            this.sampleLoopsToolStripMenuItemExample,
+            this.sampleArraysToolStripMenuItemExample});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // sampleLoopsToolStripMenuItem
+            // sampleLoopsToolStripMenuItemExample
             // 
-            this.sampleLoopsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sampleLoopsToolStripMenuItemExample.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.forLoopToolStripMenuItemExample,
             this.whileLoopToolStripMenuItemExample,
             this.doWhileLoopToolStripMenuItemExample,
             this.foreachLoopToolStripMenuItemExample});
-            this.sampleLoopsToolStripMenuItem.Name = "sampleLoopsToolStripMenuItem";
-            this.sampleLoopsToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.sampleLoopsToolStripMenuItem.Text = "Sample Loops";
+            this.sampleLoopsToolStripMenuItemExample.Name = "sampleLoopsToolStripMenuItemExample";
+            this.sampleLoopsToolStripMenuItemExample.Size = new System.Drawing.Size(160, 22);
+            this.sampleLoopsToolStripMenuItemExample.Text = "Sample Loops";
             // 
             // forLoopToolStripMenuItemExample
             // 
@@ -175,46 +175,52 @@
             this.whileLoopToolStripMenuItemExample.Name = "whileLoopToolStripMenuItemExample";
             this.whileLoopToolStripMenuItemExample.Size = new System.Drawing.Size(163, 22);
             this.whileLoopToolStripMenuItemExample.Text = "While Loop";
+            this.whileLoopToolStripMenuItemExample.Click += new System.EventHandler(this.whileLoopToolStripMenuItemExample_Click);
             // 
             // doWhileLoopToolStripMenuItemExample
             // 
             this.doWhileLoopToolStripMenuItemExample.Name = "doWhileLoopToolStripMenuItemExample";
             this.doWhileLoopToolStripMenuItemExample.Size = new System.Drawing.Size(163, 22);
             this.doWhileLoopToolStripMenuItemExample.Text = "Do While Loop";
+            this.doWhileLoopToolStripMenuItemExample.Click += new System.EventHandler(this.doWhileLoopToolStripMenuItemExample_Click);
             // 
             // foreachLoopToolStripMenuItemExample
             // 
             this.foreachLoopToolStripMenuItemExample.Name = "foreachLoopToolStripMenuItemExample";
             this.foreachLoopToolStripMenuItemExample.Size = new System.Drawing.Size(163, 22);
             this.foreachLoopToolStripMenuItemExample.Text = "Foreach Loop";
+            this.foreachLoopToolStripMenuItemExample.Click += new System.EventHandler(this.foreachLoopToolStripMenuItemExample_Click);
             // 
-            // sampleArraysToolStripMenuItem
+            // sampleArraysToolStripMenuItemExample
             // 
-            this.sampleArraysToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.singleDimensionalToolStripMenuItem,
-            this.twoDimensionalToolStripMenuItem,
-            this.multidimensionalToolStripMenuItem});
-            this.sampleArraysToolStripMenuItem.Name = "sampleArraysToolStripMenuItem";
-            this.sampleArraysToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.sampleArraysToolStripMenuItem.Text = "Sample Arrays";
+            this.sampleArraysToolStripMenuItemExample.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.singleDimensionalToolStripMenuItemExample,
+            this.twoDimensionalToolStripMenuItemExample,
+            this.multidimensionalToolStripMenuItemExample});
+            this.sampleArraysToolStripMenuItemExample.Name = "sampleArraysToolStripMenuItemExample";
+            this.sampleArraysToolStripMenuItemExample.Size = new System.Drawing.Size(160, 22);
+            this.sampleArraysToolStripMenuItemExample.Text = "Sample Arrays";
             // 
-            // singleDimensionalToolStripMenuItem
+            // singleDimensionalToolStripMenuItemExample
             // 
-            this.singleDimensionalToolStripMenuItem.Name = "singleDimensionalToolStripMenuItem";
-            this.singleDimensionalToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.singleDimensionalToolStripMenuItem.Text = "Single Dimensional";
+            this.singleDimensionalToolStripMenuItemExample.Name = "singleDimensionalToolStripMenuItemExample";
+            this.singleDimensionalToolStripMenuItemExample.Size = new System.Drawing.Size(189, 22);
+            this.singleDimensionalToolStripMenuItemExample.Text = "Single Dimensional";
+            this.singleDimensionalToolStripMenuItemExample.Click += new System.EventHandler(this.singleDimensionalToolStripMenuItemExample_Click);
             // 
-            // twoDimensionalToolStripMenuItem
+            // twoDimensionalToolStripMenuItemExample
             // 
-            this.twoDimensionalToolStripMenuItem.Name = "twoDimensionalToolStripMenuItem";
-            this.twoDimensionalToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.twoDimensionalToolStripMenuItem.Text = "Two Dimensional";
+            this.twoDimensionalToolStripMenuItemExample.Name = "twoDimensionalToolStripMenuItemExample";
+            this.twoDimensionalToolStripMenuItemExample.Size = new System.Drawing.Size(189, 22);
+            this.twoDimensionalToolStripMenuItemExample.Text = "Two Dimensional";
+            this.twoDimensionalToolStripMenuItemExample.Click += new System.EventHandler(this.twoDimensionalToolStripMenuItemExample_Click);
             // 
-            // multidimensionalToolStripMenuItem
+            // multidimensionalToolStripMenuItemExample
             // 
-            this.multidimensionalToolStripMenuItem.Name = "multidimensionalToolStripMenuItem";
-            this.multidimensionalToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.multidimensionalToolStripMenuItem.Text = "Multidimensional";
+            this.multidimensionalToolStripMenuItemExample.Name = "multidimensionalToolStripMenuItemExample";
+            this.multidimensionalToolStripMenuItemExample.Size = new System.Drawing.Size(189, 22);
+            this.multidimensionalToolStripMenuItemExample.Text = "Multidimensional";
+            this.multidimensionalToolStripMenuItemExample.Click += new System.EventHandler(this.multidimensionalToolStripMenuItemExample_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -832,6 +838,7 @@
             this.listBoxIntNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBoxIntNo.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBoxIntNo.FormattingEnabled = true;
+            this.listBoxIntNo.HorizontalScrollbar = true;
             this.listBoxIntNo.ItemHeight = 15;
             this.listBoxIntNo.Items.AddRange(new object[] {
             "Interation Count"});
@@ -862,10 +869,10 @@
             // labelExampleTitle
             // 
             this.labelExampleTitle.AutoSize = true;
-            this.labelExampleTitle.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelExampleTitle.Location = new System.Drawing.Point(28, 26);
+            this.labelExampleTitle.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelExampleTitle.Location = new System.Drawing.Point(28, 38);
             this.labelExampleTitle.Name = "labelExampleTitle";
-            this.labelExampleTitle.Size = new System.Drawing.Size(135, 74);
+            this.labelExampleTitle.Size = new System.Drawing.Size(105, 58);
             this.labelExampleTitle.TabIndex = 9;
             this.labelExampleTitle.Text = "Loops\r\nExample";
             // 
@@ -874,11 +881,11 @@
             this.listBoxShowOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBoxShowOutput.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBoxShowOutput.FormattingEnabled = true;
+            this.listBoxShowOutput.HorizontalScrollbar = true;
             this.listBoxShowOutput.ItemHeight = 15;
             this.listBoxShowOutput.Items.AddRange(new object[] {
             "Data"});
             this.listBoxShowOutput.Location = new System.Drawing.Point(243, 69);
-            this.listBoxShowOutput.MultiColumn = true;
             this.listBoxShowOutput.Name = "listBoxShowOutput";
             this.listBoxShowOutput.Size = new System.Drawing.Size(208, 302);
             this.listBoxShowOutput.TabIndex = 0;
@@ -887,75 +894,81 @@
             // 
             this.contextMenuStripFile.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.contextMenuStripFile.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem1,
-            this.showArraysToolStripMenuItem});
+            this.fileToolStripMenuItemContext,
+            this.showArraysToolStripMenuItemContext});
             this.contextMenuStripFile.Name = "contextMenuStrip1";
-            this.contextMenuStripFile.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStripFile.Size = new System.Drawing.Size(150, 48);
             // 
-            // fileToolStripMenuItem1
+            // fileToolStripMenuItemContext
             // 
-            this.fileToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.forLoopsToolStripMenuItem,
-            this.whileLoopsToolStripMenuItem,
-            this.doWhileLoopsToolStripMenuItem,
-            this.foreachLoopsToolStripMenuItem});
-            this.fileToolStripMenuItem1.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
-            this.fileToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.fileToolStripMenuItem1.Text = "Show Loops";
+            this.fileToolStripMenuItemContext.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.forLoopsToolStripMenuItemContext,
+            this.whileLoopsToolStripMenuItemContext,
+            this.doWhileLoopsToolStripMenuItemContext,
+            this.foreachLoopsToolStripMenuItemContext});
+            this.fileToolStripMenuItemContext.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fileToolStripMenuItemContext.Name = "fileToolStripMenuItemContext";
+            this.fileToolStripMenuItemContext.Size = new System.Drawing.Size(149, 22);
+            this.fileToolStripMenuItemContext.Text = "Show Loops";
             // 
-            // forLoopsToolStripMenuItem
+            // forLoopsToolStripMenuItemContext
             // 
-            this.forLoopsToolStripMenuItem.Name = "forLoopsToolStripMenuItem";
-            this.forLoopsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.forLoopsToolStripMenuItem.Text = "For Loops";
-            this.forLoopsToolStripMenuItem.Click += new System.EventHandler(this.forLoopsToolStripMenuItem_Click);
+            this.forLoopsToolStripMenuItemContext.Name = "forLoopsToolStripMenuItemContext";
+            this.forLoopsToolStripMenuItemContext.Size = new System.Drawing.Size(171, 22);
+            this.forLoopsToolStripMenuItemContext.Text = "For Loops";
+            this.forLoopsToolStripMenuItemContext.Click += new System.EventHandler(this.forLoopsToolStripMenuItemContext_Click);
             // 
-            // whileLoopsToolStripMenuItem
+            // whileLoopsToolStripMenuItemContext
             // 
-            this.whileLoopsToolStripMenuItem.Name = "whileLoopsToolStripMenuItem";
-            this.whileLoopsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.whileLoopsToolStripMenuItem.Text = "While Loops";
+            this.whileLoopsToolStripMenuItemContext.Name = "whileLoopsToolStripMenuItemContext";
+            this.whileLoopsToolStripMenuItemContext.Size = new System.Drawing.Size(171, 22);
+            this.whileLoopsToolStripMenuItemContext.Text = "While Loops";
+            this.whileLoopsToolStripMenuItemContext.Click += new System.EventHandler(this.whileLoopsToolStripMenuItemContext_Click);
             // 
-            // doWhileLoopsToolStripMenuItem
+            // doWhileLoopsToolStripMenuItemContext
             // 
-            this.doWhileLoopsToolStripMenuItem.Name = "doWhileLoopsToolStripMenuItem";
-            this.doWhileLoopsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.doWhileLoopsToolStripMenuItem.Text = "Do-While Loops";
+            this.doWhileLoopsToolStripMenuItemContext.Name = "doWhileLoopsToolStripMenuItemContext";
+            this.doWhileLoopsToolStripMenuItemContext.Size = new System.Drawing.Size(171, 22);
+            this.doWhileLoopsToolStripMenuItemContext.Text = "Do-While Loops";
+            this.doWhileLoopsToolStripMenuItemContext.Click += new System.EventHandler(this.doWhileLoopsToolStripMenuItemContext_Click);
             // 
-            // foreachLoopsToolStripMenuItem
+            // foreachLoopsToolStripMenuItemContext
             // 
-            this.foreachLoopsToolStripMenuItem.Name = "foreachLoopsToolStripMenuItem";
-            this.foreachLoopsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.foreachLoopsToolStripMenuItem.Text = "Foreach Loops";
+            this.foreachLoopsToolStripMenuItemContext.Name = "foreachLoopsToolStripMenuItemContext";
+            this.foreachLoopsToolStripMenuItemContext.Size = new System.Drawing.Size(171, 22);
+            this.foreachLoopsToolStripMenuItemContext.Text = "Foreach Loops";
+            this.foreachLoopsToolStripMenuItemContext.Click += new System.EventHandler(this.foreachLoopsToolStripMenuItemContext_Click);
             // 
-            // showArraysToolStripMenuItem
+            // showArraysToolStripMenuItemContext
             // 
-            this.showArraysToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.singleDimensionalToolStripMenuItem2,
-            this.twoDimensionalToolStripMenuItem2,
-            this.multidimensionalToolStripMenuItem2});
-            this.showArraysToolStripMenuItem.Name = "showArraysToolStripMenuItem";
-            this.showArraysToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.showArraysToolStripMenuItem.Text = "Show Arrays";
+            this.showArraysToolStripMenuItemContext.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.singleDimensionalToolStripMenuItemContext,
+            this.twoDimensionalToolStripMenuItemContext,
+            this.multidimensionalToolStripMenuItemContext});
+            this.showArraysToolStripMenuItemContext.Name = "showArraysToolStripMenuItemContext";
+            this.showArraysToolStripMenuItemContext.Size = new System.Drawing.Size(149, 22);
+            this.showArraysToolStripMenuItemContext.Text = "Show Arrays";
             // 
-            // singleDimensionalToolStripMenuItem2
+            // singleDimensionalToolStripMenuItemContext
             // 
-            this.singleDimensionalToolStripMenuItem2.Name = "singleDimensionalToolStripMenuItem2";
-            this.singleDimensionalToolStripMenuItem2.Size = new System.Drawing.Size(189, 22);
-            this.singleDimensionalToolStripMenuItem2.Text = "Single Dimensional";
+            this.singleDimensionalToolStripMenuItemContext.Name = "singleDimensionalToolStripMenuItemContext";
+            this.singleDimensionalToolStripMenuItemContext.Size = new System.Drawing.Size(189, 22);
+            this.singleDimensionalToolStripMenuItemContext.Text = "Single Dimensional";
+            this.singleDimensionalToolStripMenuItemContext.Click += new System.EventHandler(this.singleDimensionalToolStripMenuItemContext_Click);
             // 
-            // twoDimensionalToolStripMenuItem2
+            // twoDimensionalToolStripMenuItemContext
             // 
-            this.twoDimensionalToolStripMenuItem2.Name = "twoDimensionalToolStripMenuItem2";
-            this.twoDimensionalToolStripMenuItem2.Size = new System.Drawing.Size(189, 22);
-            this.twoDimensionalToolStripMenuItem2.Text = "Two Dimensional";
+            this.twoDimensionalToolStripMenuItemContext.Name = "twoDimensionalToolStripMenuItemContext";
+            this.twoDimensionalToolStripMenuItemContext.Size = new System.Drawing.Size(189, 22);
+            this.twoDimensionalToolStripMenuItemContext.Text = "Two Dimensional";
+            this.twoDimensionalToolStripMenuItemContext.Click += new System.EventHandler(this.twoDimensionalToolStripMenuItemContext_Click);
             // 
-            // multidimensionalToolStripMenuItem2
+            // multidimensionalToolStripMenuItemContext
             // 
-            this.multidimensionalToolStripMenuItem2.Name = "multidimensionalToolStripMenuItem2";
-            this.multidimensionalToolStripMenuItem2.Size = new System.Drawing.Size(189, 22);
-            this.multidimensionalToolStripMenuItem2.Text = "Multidimensional";
+            this.multidimensionalToolStripMenuItemContext.Name = "multidimensionalToolStripMenuItemContext";
+            this.multidimensionalToolStripMenuItemContext.Size = new System.Drawing.Size(189, 22);
+            this.multidimensionalToolStripMenuItemContext.Text = "Multidimensional";
+            this.multidimensionalToolStripMenuItemContext.Click += new System.EventHandler(this.multidimensionalToolStripMenuItemContext_Click);
             // 
             // FormMain
             // 
@@ -997,17 +1010,17 @@
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem viewToolStripMenuItem;
-        private ToolStripMenuItem sampleLoopsToolStripMenuItem;
-        private ToolStripMenuItem sampleArraysToolStripMenuItem;
+        private ToolStripMenuItem sampleLoopsToolStripMenuItemExample;
+        private ToolStripMenuItem sampleArraysToolStripMenuItemExample;
         private Panel panel1;
         private Panel panel2;
         private ToolStripMenuItem forLoopToolStripMenuItemExample;
         private ToolStripMenuItem whileLoopToolStripMenuItemExample;
         private ToolStripMenuItem doWhileLoopToolStripMenuItemExample;
         private ToolStripMenuItem foreachLoopToolStripMenuItemExample;
-        private ToolStripMenuItem singleDimensionalToolStripMenuItem;
-        private ToolStripMenuItem twoDimensionalToolStripMenuItem;
-        private ToolStripMenuItem multidimensionalToolStripMenuItem;
+        private ToolStripMenuItem singleDimensionalToolStripMenuItemExample;
+        private ToolStripMenuItem twoDimensionalToolStripMenuItemExample;
+        private ToolStripMenuItem multidimensionalToolStripMenuItemExample;
         private ToolStripMenuItem changeThemeToolStripMenuItem;
         private ToolStripMenuItem changeColorToolStripMenuItem;
         private ToolStripMenuItem foregroundToolStripMenuItem;
@@ -1055,7 +1068,7 @@
         private Label label4;
         private TabPage tabPageExamples;
         private ContextMenuStrip contextMenuStripFile;
-        private ToolStripMenuItem fileToolStripMenuItem1;
+        private ToolStripMenuItem fileToolStripMenuItemContext;
         private ContextMenuStrip contextMenuStripHelp;
         private ToolStripMenuItem helpToolStripMenuItem1;
         private Label label12;
@@ -1073,14 +1086,14 @@
         private ToolStripMenuItem singleDimensionalToolStripMenuItem3;
         private ToolStripMenuItem twoDimensionalToolStripMenuItem3;
         private ToolStripMenuItem multidimensionalToolStripMenuItem3;
-        private ToolStripMenuItem forLoopsToolStripMenuItem;
-        private ToolStripMenuItem whileLoopsToolStripMenuItem;
-        private ToolStripMenuItem doWhileLoopsToolStripMenuItem;
-        private ToolStripMenuItem foreachLoopsToolStripMenuItem;
-        private ToolStripMenuItem showArraysToolStripMenuItem;
-        private ToolStripMenuItem singleDimensionalToolStripMenuItem2;
-        private ToolStripMenuItem twoDimensionalToolStripMenuItem2;
-        private ToolStripMenuItem multidimensionalToolStripMenuItem2;
+        private ToolStripMenuItem forLoopsToolStripMenuItemContext;
+        private ToolStripMenuItem whileLoopsToolStripMenuItemContext;
+        private ToolStripMenuItem doWhileLoopsToolStripMenuItemContext;
+        private ToolStripMenuItem foreachLoopsToolStripMenuItemContext;
+        private ToolStripMenuItem showArraysToolStripMenuItemContext;
+        private ToolStripMenuItem singleDimensionalToolStripMenuItemContext;
+        private ToolStripMenuItem twoDimensionalToolStripMenuItemContext;
+        private ToolStripMenuItem multidimensionalToolStripMenuItemContext;
         private ListBox listBoxIntNo;
     }
 }
