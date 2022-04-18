@@ -96,135 +96,190 @@
 
         private void forLoopCode()
         {
-            listBoxShowOutput.Items.Clear();
-            listBoxIntNo.Items.Clear();
-            labelExampleTitle.Text = "For Loop \nExample";
-            labelDescription.Text = "All odd numbers from 1-20.";
-            int oddNum = 1;
-            for (int i = 0; i < 20; i++)
+            try
             {
-                if (oddNum % 2 != 0)
+                listBoxShowOutput.Items.Clear();
+                listBoxIntNo.Items.Clear();
+                labelExampleTitle.Text = "For Loop \nExample";
+                labelDescription.Text = "All odd numbers from 1-20.";
+                int oddNum = 1;
+                for (int i = 0; i < 20; i++)
                 {
-                    listBoxShowOutput.Items.Add(oddNum + " is odd number");
-                }
-                listBoxIntNo.Items.Add("No. of interations: " + i);
-                oddNum++;
+                    if (oddNum % 2 != 0)
+                    {
+                        listBoxShowOutput.Items.Add(oddNum + " is odd number");
+                    }
+                    listBoxIntNo.Items.Add("No. of interations: " + i);
+                    oddNum++;
 
+                }
+            }
+            catch (Exception ex)
+            {
+                string cap = "Unexpected Error occured.";
+                MessageBox.Show(ex.ToString(), cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void whileLoopCode()
         {
-            listBoxShowOutput.Items.Clear();
-            listBoxIntNo.Items.Clear();
-            labelExampleTitle.Text = "While Loop \nExample";
-            labelDescription.Text = "All even numbers from 1-20.";
-            int i = 0;
-            int evenNum = 1;
-            while (i < 20)
+            try
             {
-                if (evenNum % 2 == 0)
+                listBoxShowOutput.Items.Clear();
+                listBoxIntNo.Items.Clear();
+                labelExampleTitle.Text = "While Loop \nExample";
+                labelDescription.Text = "All even numbers from 1-20.";
+                int i = 0;
+                int evenNum = 1;
+                while (i < 20)
                 {
-                    listBoxShowOutput.Items.Add(evenNum + " is even number");
+                    if (evenNum % 2 == 0)
+                    {
+                        listBoxShowOutput.Items.Add(evenNum + " is even number");
+                    }
+                    listBoxIntNo.Items.Add("No. of interations: " + i);
+                    evenNum++;
+                    i++;
                 }
-                listBoxIntNo.Items.Add("No. of interations: " + i);
-                evenNum++;
-                i++;
+            }
+            catch (Exception ex)
+            {
+                string cap = "Unexpected Error occured.";
+                MessageBox.Show(ex.ToString(), cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void doWhileLoopCode()
         {
-            listBoxShowOutput.Items.Clear();
-            listBoxIntNo.Items.Clear();
-            labelExampleTitle.Text = "Do While\nLoop Example";
-            labelDescription.Text = "Check if a number is even or\nodd from 1 - 25.";
-            int i = 0;
-            int isOddorEven = 1;
-            do
+            try
             {
-                if (isOddorEven % 2 == 0)
+                listBoxShowOutput.Items.Clear();
+                listBoxIntNo.Items.Clear();
+                labelExampleTitle.Text = "Do While\nLoop Example";
+                labelDescription.Text = "Check if a number is even or\nodd from 1 - 25.";
+                int i = 0;
+                int isOddorEven = 1;
+                do
                 {
-                    listBoxShowOutput.Items.Add(isOddorEven + " is even number");
+                    if (isOddorEven % 2 == 0)
+                    {
+                        listBoxShowOutput.Items.Add(isOddorEven + " is even number");
+                    }
+                    else if (isOddorEven % 2 != 0)
+                    {
+                        listBoxShowOutput.Items.Add(isOddorEven + " is odd number");
+                    }
+                    listBoxIntNo.Items.Add("No. of interations: " + i);
+                    isOddorEven++;
+                    i++;
                 }
-                else if (isOddorEven % 2 != 0)
-                {
-                    listBoxShowOutput.Items.Add(isOddorEven + " is odd number");
-                }
-                listBoxIntNo.Items.Add("No. of interations: " + i);
-                isOddorEven++;
-                i++;
+                while (i < 25);
             }
-            while (i < 25);
+            catch (Exception ex)
+            {
+                string cap = "Unexpected Error occured.";
+                MessageBox.Show(ex.ToString(), cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void foreachLoopCode()
         {
-            listBoxShowOutput.Items.Clear();
-            listBoxIntNo.Items.Clear();
-            labelExampleTitle.Text = "Foreach\nLoop";
-            labelDescription.Text = "List all your favorite games.";
-            string[] allgames = { "Guardian Tales", "Genshin Impact", "Valorant", "Minecraft" };
-            listBoxShowOutput.Items.Add("My Favorite Games:");
-            int index = 0;
-            foreach (string x in allgames)
+            try
             {
-                listBoxShowOutput.Items.Add(x);
-                listBoxIntNo.Items.Add($"Index of {x} in array: {index}");
-                index++;
+                listBoxShowOutput.Items.Clear();
+                listBoxIntNo.Items.Clear();
+                labelExampleTitle.Text = "Foreach\nLoop";
+                labelDescription.Text = "List all your favorite games.";
+                string[] allgames = { "Guardian Tales", "Genshin Impact", "Valorant", "Minecraft" };
+                listBoxShowOutput.Items.Add("My Favorite Games:");
+                int index = 0;
+                foreach (string x in allgames)
+                {
+                    listBoxShowOutput.Items.Add(x);
+                    listBoxIntNo.Items.Add($"Index of {x} in array: {index}");
+                    index++;
+                }
+            }
+            catch (Exception ex)
+            {
+                string cap = "Unexpected Error occured.";
+                MessageBox.Show(ex.ToString(), cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void singleDimArrCode()
         {
-            listBoxShowOutput.Items.Clear();
-            listBoxIntNo.Items.Clear();
-            labelExampleTitle.Text = "One Dimensional\nArray";
-            labelDescription.Text = "List all your favorite anime\nthis season.";
-            string[] allanime = { "Ya Boy Kongming", "Spy x Family", "LoveLive", "Kaguya-sama" };
-            listBoxShowOutput.Items.Add("My Favorite Anime:");
-            int index = 0;
-            foreach (string x in allanime)
+            try
             {
-                listBoxShowOutput.Items.Add(x);
-                listBoxIntNo.Items.Add($"Index of {x} in array: {index}");
-                index++;
+                listBoxShowOutput.Items.Clear();
+                listBoxIntNo.Items.Clear();
+                labelExampleTitle.Text = "One Dimensional\nArray";
+                labelDescription.Text = "List all your favorite anime\nthis season.";
+                string[] allanime = { "Ya Boy Kongming", "Spy x Family", "LoveLive", "Kaguya-sama" };
+                listBoxShowOutput.Items.Add("My Favorite Anime:");
+                int index = 0;
+                foreach (string x in allanime)
+                {
+                    listBoxShowOutput.Items.Add(x);
+                    listBoxIntNo.Items.Add($"Index of {x} in array: {index}");
+                    index++;
+                }
+            }
+            catch (Exception ex)
+            {
+                string cap = "Unexpected Error occured.";
+                MessageBox.Show(ex.ToString(), cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void twoDimArrCode()
         {
-            listBoxShowOutput.Items.Clear();
-            listBoxIntNo.Items.Clear();
-            labelExampleTitle.Text = "Two Dimensional\nArray";
-            labelDescription.Text = "List some countries and\nthier well-known cities.";
-            string[,] countrycity = { { "Japan", "USA", "UK" }, { "Tokyo", "New York", "London" } };
-            listBoxShowOutput.Items.Add("Countries and Cities:");
-            for (int x = 0; x < 3; x++)
+            try
             {
-                listBoxShowOutput.Items.Add($"Country: {countrycity[0, x]}");
-                listBoxShowOutput.Items.Add($"City: {countrycity[1, x]}");
+                listBoxShowOutput.Items.Clear();
+                listBoxIntNo.Items.Clear();
+                labelExampleTitle.Text = "Two Dimensional\nArray";
+                labelDescription.Text = "List some countries and\nthier well-known cities.";
+                string[,] countrycity = { { "Japan", "USA", "UK" }, { "Tokyo", "New York", "London" } };
+                listBoxShowOutput.Items.Add("Countries and Cities:");
+                for (int x = 0; x < 3; x++)
+                {
+                    listBoxShowOutput.Items.Add($"Country: {countrycity[0, x]}");
+                    listBoxShowOutput.Items.Add($"City: {countrycity[1, x]}");
+                }
+                for (int x = 0; x < 2; x++)
+                    for (int y = 0; y < 3; y++)
+                        listBoxIntNo.Items.Add($"Index of {countrycity[x, y]} is: arr[{x},{y}]");
             }
-            for (int x = 0; x < 2; x++)
-                for (int y = 0; y < 3; y++)
-                    listBoxIntNo.Items.Add($"Index of {countrycity[x, y]} is: arr[{x},{y}]");
-
+            catch (Exception ex)
+            {
+                string cap = "Unexpected Error occured.";
+                MessageBox.Show(ex.ToString(), cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void multiDimArrCode()
         {
-            listBoxShowOutput.Items.Clear();
-            listBoxIntNo.Items.Clear();
-            labelExampleTitle.Text = "Multidimensional\nArray";
-            labelDescription.Text = "List all rows, columns,\nand blocks of an array";
-            string[,,] arr = { { { "row1", "row2" }, { "row3", "row4" } }, { { "row5", "row6" }, { "row7", "row8" } } };
-            for (int i = 0; i < arr.GetLength(0); i++)
-                for (int j = 0; j < arr.GetLength(1); j++)
-                    for (int k = 0; k < arr.GetLength(2); k++)
-                    {
-                        listBoxShowOutput.Items.Add($"index of {arr[i, j, k]} is arr[{i}, {j}, {k}]");
-                        listBoxIntNo.Items.Add($"block loops: {i} times, columns loops: {j} times, rows loops: {k} times");
-                    }
+            try
+            {
+                listBoxShowOutput.Items.Clear();
+                listBoxIntNo.Items.Clear();
+                labelExampleTitle.Text = "Multidimensional\nArray";
+                labelDescription.Text = "List all rows, columns,\nand blocks of an array";
+                string[,,] arr = { { { "row1", "row2" }, { "row3", "row4" } }, { { "row5", "row6" }, { "row7", "row8" } } };
+                for (int i = 0; i < arr.GetLength(0); i++)
+                    for (int j = 0; j < arr.GetLength(1); j++)
+                        for (int k = 0; k < arr.GetLength(2); k++)
+                        {
+                            listBoxShowOutput.Items.Add($"index of {arr[i, j, k]} is arr[{i}, {j}, {k}]");
+                            listBoxIntNo.Items.Add($"block loops: {i} times, columns loops: {j} times, rows loops: {k} times");
+                        }
+            }
+            catch (Exception ex)
+            {
+                string cap = "Unexpected Error occured.";
+                MessageBox.Show(ex.ToString(), cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void forLoopToolStripMenuItemExample_Click(object sender, EventArgs e)

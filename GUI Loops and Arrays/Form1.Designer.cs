@@ -152,11 +152,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(406, 9);
+            this.label4.Location = new System.Drawing.Point(388, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 22);
+            this.label4.Size = new System.Drawing.Size(116, 22);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Prepared By:";
+            this.label4.Text = "Prepared By: ";
             // 
             // dateTimePicker1
             // 
@@ -179,7 +179,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FormTitle";
-            this.Text = "Form1";
+            this.Text = "Title Form";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
