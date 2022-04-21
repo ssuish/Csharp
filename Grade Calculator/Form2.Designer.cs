@@ -1,6 +1,6 @@
 ﻿namespace Grade_Calculator
 {
-    partial class Form2
+    partial class FormSignup
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxRepeatPwrd = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.buttonSignup = new System.Windows.Forms.Button();
             this.buttonToLogin = new System.Windows.Forms.Button();
             this.textBoxLogPwrd = new System.Windows.Forms.TextBox();
@@ -36,10 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelLogin = new System.Windows.Forms.Label();
-            this.textBoxRepeatPwrd = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +62,39 @@
             this.panel1.Size = new System.Drawing.Size(384, 361);
             this.panel1.TabIndex = 0;
             // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(200, 168);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(100, 23);
+            this.textBoxEmail.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(98, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 15);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Email";
+            // 
+            // textBoxRepeatPwrd
+            // 
+            this.textBoxRepeatPwrd.Location = new System.Drawing.Point(200, 139);
+            this.textBoxRepeatPwrd.Name = "textBoxRepeatPwrd";
+            this.textBoxRepeatPwrd.PasswordChar = '•';
+            this.textBoxRepeatPwrd.Size = new System.Drawing.Size(100, 23);
+            this.textBoxRepeatPwrd.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(98, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 15);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Repeat Password";
+            // 
             // buttonSignup
             // 
             this.buttonSignup.Location = new System.Drawing.Point(200, 217);
@@ -70,6 +103,7 @@
             this.buttonSignup.TabIndex = 13;
             this.buttonSignup.Text = "Sign up";
             this.buttonSignup.UseVisualStyleBackColor = true;
+            this.buttonSignup.Click += new System.EventHandler(this.buttonSignup_Click);
             // 
             // buttonToLogin
             // 
@@ -79,6 +113,7 @@
             this.buttonToLogin.TabIndex = 12;
             this.buttonToLogin.Text = "Log In";
             this.buttonToLogin.UseVisualStyleBackColor = true;
+            this.buttonToLogin.Click += new System.EventHandler(this.buttonToLogin_Click);
             // 
             // textBoxLogPwrd
             // 
@@ -122,46 +157,13 @@
             this.labelLogin.TabIndex = 7;
             this.labelLogin.Text = "Sign Up";
             // 
-            // textBoxRepeatPwrd
-            // 
-            this.textBoxRepeatPwrd.Location = new System.Drawing.Point(200, 139);
-            this.textBoxRepeatPwrd.Name = "textBoxRepeatPwrd";
-            this.textBoxRepeatPwrd.PasswordChar = '•';
-            this.textBoxRepeatPwrd.Size = new System.Drawing.Size(100, 23);
-            this.textBoxRepeatPwrd.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 15);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Repeat Password";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 15);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Email";
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Location = new System.Drawing.Point(200, 168);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(100, 23);
-            this.textBoxEmail.TabIndex = 17;
-            // 
-            // Form2
+            // FormSignup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.Controls.Add(this.panel1);
-            this.Name = "Form2";
+            this.Name = "FormSignup";
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
