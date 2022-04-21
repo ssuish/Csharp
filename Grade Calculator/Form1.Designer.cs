@@ -31,7 +31,7 @@
             this.panelLogin = new System.Windows.Forms.Panel();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonToSignup = new System.Windows.Forms.Button();
-            this.textBoxLogPwd = new System.Windows.Forms.TextBox();
+            this.textBoxLogPwrd = new System.Windows.Forms.TextBox();
             this.textBoxLogUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             // 
             this.panelLogin.Controls.Add(this.buttonLogin);
             this.panelLogin.Controls.Add(this.buttonToSignup);
-            this.panelLogin.Controls.Add(this.textBoxLogPwd);
+            this.panelLogin.Controls.Add(this.textBoxLogPwrd);
             this.panelLogin.Controls.Add(this.textBoxLogUsername);
             this.panelLogin.Controls.Add(this.label2);
             this.panelLogin.Controls.Add(this.label1);
@@ -56,7 +56,7 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(103, 105);
+            this.buttonLogin.Location = new System.Drawing.Point(12, 103);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(75, 23);
             this.buttonLogin.TabIndex = 6;
@@ -66,21 +66,21 @@
             // 
             // buttonToSignup
             // 
-            this.buttonToSignup.Location = new System.Drawing.Point(12, 105);
+            this.buttonToSignup.Location = new System.Drawing.Point(12, 141);
             this.buttonToSignup.Name = "buttonToSignup";
-            this.buttonToSignup.Size = new System.Drawing.Size(75, 23);
+            this.buttonToSignup.Size = new System.Drawing.Size(114, 23);
             this.buttonToSignup.TabIndex = 5;
-            this.buttonToSignup.Text = "To Sign up";
+            this.buttonToSignup.Text = "Create Account";
             this.buttonToSignup.UseVisualStyleBackColor = true;
             this.buttonToSignup.Click += new System.EventHandler(this.buttonToSignup_Click);
             // 
-            // textBoxLogPwd
+            // textBoxLogPwrd
             // 
-            this.textBoxLogPwd.Location = new System.Drawing.Point(78, 65);
-            this.textBoxLogPwd.Name = "textBoxLogPwd";
-            this.textBoxLogPwd.PasswordChar = '•';
-            this.textBoxLogPwd.Size = new System.Drawing.Size(100, 23);
-            this.textBoxLogPwd.TabIndex = 4;
+            this.textBoxLogPwrd.Location = new System.Drawing.Point(78, 65);
+            this.textBoxLogPwrd.Name = "textBoxLogPwrd";
+            this.textBoxLogPwrd.PasswordChar = '•';
+            this.textBoxLogPwrd.Size = new System.Drawing.Size(100, 23);
+            this.textBoxLogPwrd.TabIndex = 4;
             // 
             // textBoxLogUsername
             // 
@@ -135,7 +135,7 @@
         private Panel panelLogin;
         private Button buttonLogin;
         private Button buttonToSignup;
-        private TextBox textBoxLogPwd;
+        private TextBox textBoxLogPwrd;
         private TextBox textBoxLogUsername;
         private Label label2;
         private Label label1;

@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace Grade_Calculator
 {
-    internal class ClassAES
+    internal class AESSecuity
     {
         private readonly static string key = "b14ca5898a4e4133bbce2ea2315a1916";
 
