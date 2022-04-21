@@ -31,8 +31,8 @@
             this.panelLogin = new System.Windows.Forms.Panel();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonToSignup = new System.Windows.Forms.Button();
-            this.textBoxPwd = new System.Windows.Forms.TextBox();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.textBoxLogPwd = new System.Windows.Forms.TextBox();
+            this.textBoxLogUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelLogin = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@
             // 
             this.panelLogin.Controls.Add(this.buttonLogin);
             this.panelLogin.Controls.Add(this.buttonToSignup);
-            this.panelLogin.Controls.Add(this.textBoxPwd);
-            this.panelLogin.Controls.Add(this.textBoxUsername);
+            this.panelLogin.Controls.Add(this.textBoxLogPwd);
+            this.panelLogin.Controls.Add(this.textBoxLogUsername);
             this.panelLogin.Controls.Add(this.label2);
             this.panelLogin.Controls.Add(this.label1);
             this.panelLogin.Controls.Add(this.labelLogin);
@@ -74,20 +74,20 @@
             this.buttonToSignup.UseVisualStyleBackColor = true;
             this.buttonToSignup.Click += new System.EventHandler(this.buttonToSignup_Click);
             // 
-            // textBoxPwd
+            // textBoxLogPwd
             // 
-            this.textBoxPwd.Location = new System.Drawing.Point(78, 65);
-            this.textBoxPwd.Name = "textBoxPwd";
-            this.textBoxPwd.PasswordChar = '•';
-            this.textBoxPwd.Size = new System.Drawing.Size(100, 23);
-            this.textBoxPwd.TabIndex = 4;
+            this.textBoxLogPwd.Location = new System.Drawing.Point(78, 65);
+            this.textBoxLogPwd.Name = "textBoxLogPwd";
+            this.textBoxLogPwd.PasswordChar = '•';
+            this.textBoxLogPwd.Size = new System.Drawing.Size(100, 23);
+            this.textBoxLogPwd.TabIndex = 4;
             // 
-            // textBoxUsername
+            // textBoxLogUsername
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(78, 35);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(100, 23);
-            this.textBoxUsername.TabIndex = 3;
+            this.textBoxLogUsername.Location = new System.Drawing.Point(78, 35);
+            this.textBoxLogUsername.Name = "textBoxLogUsername";
+            this.textBoxLogUsername.Size = new System.Drawing.Size(100, 23);
+            this.textBoxLogUsername.TabIndex = 3;
             // 
             // label2
             // 
@@ -135,8 +135,8 @@
         private Panel panelLogin;
         private Button buttonLogin;
         private Button buttonToSignup;
-        private TextBox textBoxPwd;
-        private TextBox textBoxUsername;
+        private TextBox textBoxLogPwd;
+        private TextBox textBoxLogUsername;
         private Label label2;
         private Label label1;
         private Label labelLogin;
