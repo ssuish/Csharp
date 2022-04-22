@@ -30,17 +30,16 @@ namespace Grade_Calculator
         {
             Security aes = new Security();
             string userInfo = textBoxLogUsername.Text + "//" + textBoxLogPwrd.Text;
-            string userData = userInfo + "//" + textBoxEmail.Text;
-            string securedInfo = aes.Encrypt(userInfo + "//" + userData);
+            string loginToken = aes.Encrypt(userInfo);
 
             string runTimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string dataDirectory = Path.Combine(runTimeDirectory, "Data");
             if (!Directory.Exists(dataDirectory))
                 Directory.CreateDirectory(dataDirectory);
 
-            TextWriter writer = new StreamWriter(Path.Combine(dataDirectory, "userData.txt"));
-            writer.WriteLine(securedInfo);
-            writer.Close();
+            TextWriter writerToken = new StreamWriter(Path.Combine(dataDirectory, "userData.txt"));
+            writerToken.WriteLine(loginToken);
+            writerToken.Close();
         }
     }
 }
