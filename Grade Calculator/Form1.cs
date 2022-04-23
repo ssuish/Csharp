@@ -19,31 +19,38 @@ namespace Grade_Calculator
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            Security aes = new Security();
-
-            string runTimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string dataDirectory = Path.Combine(runTimeDirectory, "Data");
-
-            StreamReader reader = new StreamReader(Path.Combine(dataDirectory, "userData.txt"));
             try
             {
-                var userInfo = string.Empty;
-                do
+                Security aes = new Security();
+
+                string runTimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string dataDirectory = Path.Combine(runTimeDirectory, "Data");
+                StreamReader reader = new StreamReader(Path.Combine(dataDirectory, "userData.txt"));
+
+                try
                 {
-                    userInfo = reader.ReadLine();
+                    var userInfo = string.Empty;
+                    do
+                    {
+                        userInfo = reader.ReadLine();
+                    }
+                    while (reader.Peek() != -1);
+
+                    MessageBox.Show(aes.Decrypt(userInfo));
                 }
-                while(reader.Peek() != -1);
-                
-                MessageBox.Show(aes.Decrypt(userInfo));
+                catch
+                {
+                    MessageBox.Show("File is Empty!");
+                }
+                finally
+                {
+                    reader.Dispose();
+                    reader.Close();
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("File is Empty!");
-            }
-            finally
-            {
-                reader.Dispose();
-                reader.Close();
+                MessageBox.Show("Fatal error occured.\n" + ex);
             }
         }
     }
