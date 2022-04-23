@@ -26,7 +26,7 @@ static void printReverse(string str)
             }
         }
         else
-        {
+        {  
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("User input is empty!");
             Console.ResetColor();
