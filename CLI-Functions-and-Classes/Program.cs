@@ -8,6 +8,13 @@ C# Function syntax
     
     return // if return type is not void.
 }
+
+C# class syntax
+<access modifier> class <identifier>
+{
+    // Fields, functions, and events here...
+}
+
 */
 
 
