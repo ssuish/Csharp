@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.buttonDeleteAcc = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonToSignup = new System.Windows.Forms.Button();
             this.textBoxLogPwrd = new System.Windows.Forms.TextBox();
@@ -41,6 +42,7 @@
             // 
             // panelLogin
             // 
+            this.panelLogin.Controls.Add(this.buttonDeleteAcc);
             this.panelLogin.Controls.Add(this.buttonLogin);
             this.panelLogin.Controls.Add(this.buttonToSignup);
             this.panelLogin.Controls.Add(this.textBoxLogPwrd);
@@ -53,6 +55,16 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(384, 361);
             this.panelLogin.TabIndex = 0;
+            // 
+            // buttonDeleteAcc
+            // 
+            this.buttonDeleteAcc.Location = new System.Drawing.Point(12, 170);
+            this.buttonDeleteAcc.Name = "buttonDeleteAcc";
+            this.buttonDeleteAcc.Size = new System.Drawing.Size(114, 23);
+            this.buttonDeleteAcc.TabIndex = 7;
+            this.buttonDeleteAcc.Text = "Delete Account";
+            this.buttonDeleteAcc.UseVisualStyleBackColor = true;
+            this.buttonDeleteAcc.Click += new System.EventHandler(this.buttonDeleteAcc_Click);
             // 
             // buttonLogin
             // 
@@ -124,6 +136,7 @@
             this.Controls.Add(this.panelLogin);
             this.Name = "FormLogin";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             this.ResumeLayout(false);
@@ -140,5 +153,6 @@
         private Label label2;
         private Label label1;
         private Label labelLogin;
+        private Button buttonDeleteAcc;
     }
 }

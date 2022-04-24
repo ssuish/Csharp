@@ -28,18 +28,42 @@ namespace Grade_Calculator
 
         private void buttonSignup_Click(object sender, EventArgs e)
         {
-            Security aes = new Security();
-            string userInfo = textBoxLogUsername.Text + "//" + textBoxLogPwrd.Text;
-            string loginToken = aes.Encrypt(userInfo);
+            try
+            {
+                Security aes = new Security();
 
-            string runTimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string dataDirectory = Path.Combine(runTimeDirectory, "Data");
-            if (!Directory.Exists(dataDirectory))
-                Directory.CreateDirectory(dataDirectory);
+                string cap = string.Empty;
+                string msg = string.Empty;
 
-            TextWriter writerToken = new StreamWriter(Path.Combine(dataDirectory, "userData.txt"));
-            writerToken.WriteLine(loginToken);
-            writerToken.Close();
+                if (textBoxLogPwrd.Text == textBoxRepeatPwrd.Text)
+                {
+                    string userInfo = textBoxLogUsername.Text + "," + textBoxLogPwrd.Text;
+                    string loginToken = aes.Encrypt(userInfo);
+
+                    string runTimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                    string dataDirectory = Path.Combine(runTimeDirectory, "Data");
+                    if (!Directory.Exists(dataDirectory))
+                        Directory.CreateDirectory(dataDirectory);
+
+                    TextWriter writerToken = new StreamWriter(Path.Combine(dataDirectory, "userData.txt"));
+                    writerToken.WriteLine(loginToken);
+                    writerToken.Close();
+
+                    cap = "Sign up successful";
+                    msg = "You have created new account! Please proceed to login.";
+                    MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    cap = "Invalid Information";
+                    msg = "Passwords aren't matched. Please try again.";
+                    MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Fatal error occured. " + ex);
+            }
         }
     }
 }
