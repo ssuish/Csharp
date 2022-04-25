@@ -108,13 +108,11 @@ namespace Grade_Calculator
             }
         }
 
-        private void buttonToLoginPage_Click(object sender, EventArgs e)
+        private void buttonBacktoLogin_Click(object sender, EventArgs e)
         {
             FormLogin login = new FormLogin();
             this.Hide();
             login.Show();
         }
-
-        
     }
 }
