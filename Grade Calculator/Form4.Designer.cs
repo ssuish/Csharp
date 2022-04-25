@@ -71,6 +71,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
             this.panel1.Controls.Add(this.labelLetterGrade);
             this.panel1.Controls.Add(this.labelGradeRemarks);
             this.panel1.Controls.Add(this.label21);
@@ -109,6 +110,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(568, 398);
@@ -117,142 +119,161 @@
             // labelLetterGrade
             // 
             this.labelLetterGrade.AutoSize = true;
-            this.labelLetterGrade.Location = new System.Drawing.Point(409, 268);
+            this.labelLetterGrade.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelLetterGrade.Location = new System.Drawing.Point(442, 262);
             this.labelLetterGrade.Name = "labelLetterGrade";
-            this.labelLetterGrade.Size = new System.Drawing.Size(24, 15);
+            this.labelLetterGrade.Size = new System.Drawing.Size(30, 18);
             this.labelLetterGrade.TabIndex = 36;
             this.labelLetterGrade.Text = "ND";
             // 
             // labelGradeRemarks
             // 
             this.labelGradeRemarks.AutoSize = true;
-            this.labelGradeRemarks.Location = new System.Drawing.Point(238, 334);
+            this.labelGradeRemarks.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelGradeRemarks.Location = new System.Drawing.Point(271, 328);
             this.labelGradeRemarks.Name = "labelGradeRemarks";
-            this.labelGradeRemarks.Size = new System.Drawing.Size(50, 15);
+            this.labelGradeRemarks.Size = new System.Drawing.Size(62, 18);
             this.labelGradeRemarks.TabIndex = 35;
             this.labelGradeRemarks.Text = "No Data";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(238, 310);
+            this.label21.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.Location = new System.Drawing.Point(271, 304);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(55, 15);
+            this.label21.Size = new System.Drawing.Size(73, 18);
             this.label21.TabIndex = 34;
             this.label21.Text = "Remarks:";
             // 
             // labelResultMTGrade
             // 
             this.labelResultMTGrade.AutoSize = true;
-            this.labelResultMTGrade.Location = new System.Drawing.Point(368, 268);
+            this.labelResultMTGrade.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelResultMTGrade.Location = new System.Drawing.Point(401, 262);
             this.labelResultMTGrade.Name = "labelResultMTGrade";
-            this.labelResultMTGrade.Size = new System.Drawing.Size(19, 15);
+            this.labelResultMTGrade.Size = new System.Drawing.Size(26, 18);
             this.labelResultMTGrade.TabIndex = 33;
             this.labelResultMTGrade.Text = "00";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(238, 268);
+            this.label19.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.Location = new System.Drawing.Point(271, 262);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(90, 15);
+            this.label19.Size = new System.Drawing.Size(115, 18);
             this.label19.TabIndex = 32;
             this.label19.Text = "Midterm Grade:";
             // 
             // textBoxLAAverage
             // 
-            this.textBoxLAAverage.Location = new System.Drawing.Point(358, 202);
+            this.textBoxLAAverage.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxLAAverage.Location = new System.Drawing.Point(431, 190);
             this.textBoxLAAverage.Name = "textBoxLAAverage";
             this.textBoxLAAverage.Size = new System.Drawing.Size(41, 23);
             this.textBoxLAAverage.TabIndex = 31;
             // 
             // textBoxLA4
             // 
-            this.textBoxLA4.Location = new System.Drawing.Point(358, 173);
+            this.textBoxLA4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxLA4.Location = new System.Drawing.Point(431, 161);
             this.textBoxLA4.Name = "textBoxLA4";
             this.textBoxLA4.Size = new System.Drawing.Size(41, 23);
             this.textBoxLA4.TabIndex = 30;
             // 
             // textBoxLA3
             // 
-            this.textBoxLA3.Location = new System.Drawing.Point(358, 144);
+            this.textBoxLA3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxLA3.Location = new System.Drawing.Point(431, 132);
             this.textBoxLA3.Name = "textBoxLA3";
             this.textBoxLA3.Size = new System.Drawing.Size(41, 23);
             this.textBoxLA3.TabIndex = 29;
             // 
             // textBoxLA2
             // 
-            this.textBoxLA2.Location = new System.Drawing.Point(358, 115);
+            this.textBoxLA2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxLA2.Location = new System.Drawing.Point(431, 103);
             this.textBoxLA2.Name = "textBoxLA2";
             this.textBoxLA2.Size = new System.Drawing.Size(41, 23);
             this.textBoxLA2.TabIndex = 28;
             // 
             // textBoxLA1
             // 
-            this.textBoxLA1.Location = new System.Drawing.Point(358, 85);
+            this.textBoxLA1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxLA1.Location = new System.Drawing.Point(431, 73);
             this.textBoxLA1.Name = "textBoxLA1";
             this.textBoxLA1.Size = new System.Drawing.Size(41, 23);
             this.textBoxLA1.TabIndex = 27;
             // 
             // textBoxExamAverage
             // 
-            this.textBoxExamAverage.Location = new System.Drawing.Point(177, 355);
+            this.textBoxExamAverage.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxExamAverage.Location = new System.Drawing.Point(202, 343);
             this.textBoxExamAverage.Name = "textBoxExamAverage";
             this.textBoxExamAverage.Size = new System.Drawing.Size(41, 23);
             this.textBoxExamAverage.TabIndex = 26;
             // 
             // textBoxExam
             // 
-            this.textBoxExam.Location = new System.Drawing.Point(177, 326);
+            this.textBoxExam.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxExam.Location = new System.Drawing.Point(202, 314);
             this.textBoxExam.Name = "textBoxExam";
             this.textBoxExam.Size = new System.Drawing.Size(41, 23);
             this.textBoxExam.TabIndex = 25;
             // 
             // textBoxASAverage
             // 
-            this.textBoxASAverage.Location = new System.Drawing.Point(177, 260);
+            this.textBoxASAverage.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxASAverage.Location = new System.Drawing.Point(202, 248);
             this.textBoxASAverage.Name = "textBoxASAverage";
             this.textBoxASAverage.Size = new System.Drawing.Size(41, 23);
             this.textBoxASAverage.TabIndex = 24;
             // 
             // textBoxAS2
             // 
-            this.textBoxAS2.Location = new System.Drawing.Point(177, 231);
+            this.textBoxAS2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxAS2.Location = new System.Drawing.Point(202, 219);
             this.textBoxAS2.Name = "textBoxAS2";
             this.textBoxAS2.Size = new System.Drawing.Size(41, 23);
             this.textBoxAS2.TabIndex = 23;
             // 
             // textBoxAS1
             // 
-            this.textBoxAS1.Location = new System.Drawing.Point(177, 202);
+            this.textBoxAS1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxAS1.Location = new System.Drawing.Point(202, 190);
             this.textBoxAS1.Name = "textBoxAS1";
             this.textBoxAS1.Size = new System.Drawing.Size(41, 23);
             this.textBoxAS1.TabIndex = 22;
             // 
             // textBoxQuizAve
             // 
-            this.textBoxQuizAve.Location = new System.Drawing.Point(177, 144);
+            this.textBoxQuizAve.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxQuizAve.Location = new System.Drawing.Point(202, 132);
             this.textBoxQuizAve.Name = "textBoxQuizAve";
             this.textBoxQuizAve.Size = new System.Drawing.Size(41, 23);
             this.textBoxQuizAve.TabIndex = 21;
             // 
             // textBoxQuiz2
             // 
-            this.textBoxQuiz2.Location = new System.Drawing.Point(177, 115);
+            this.textBoxQuiz2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxQuiz2.Location = new System.Drawing.Point(202, 103);
             this.textBoxQuiz2.Name = "textBoxQuiz2";
             this.textBoxQuiz2.Size = new System.Drawing.Size(41, 23);
             this.textBoxQuiz2.TabIndex = 20;
             // 
             // textBoxQuiz1
             // 
-            this.textBoxQuiz1.Location = new System.Drawing.Point(177, 85);
+            this.textBoxQuiz1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxQuiz1.Location = new System.Drawing.Point(202, 73);
             this.textBoxQuiz1.Name = "textBoxQuiz1";
             this.textBoxQuiz1.Size = new System.Drawing.Size(41, 23);
             this.textBoxQuiz1.TabIndex = 19;
             // 
             // buttonComputeGrade
             // 
-            this.buttonComputeGrade.Location = new System.Drawing.Point(238, 224);
+            this.buttonComputeGrade.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonComputeGrade.Location = new System.Drawing.Point(362, 220);
             this.buttonComputeGrade.Name = "buttonComputeGrade";
             this.buttonComputeGrade.Size = new System.Drawing.Size(110, 23);
             this.buttonComputeGrade.TabIndex = 18;
@@ -263,162 +284,193 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(238, 191);
+            this.label18.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label18.Location = new System.Drawing.Point(311, 179);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(94, 15);
+            this.label18.Size = new System.Drawing.Size(115, 18);
             this.label18.TabIndex = 17;
             this.label18.Text = "Lab Act average:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(238, 115);
+            this.label17.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label17.Location = new System.Drawing.Point(311, 103);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(56, 15);
+            this.label17.Size = new System.Drawing.Size(67, 18);
             this.label17.TabIndex = 16;
             this.label17.Text = "Lab Act 2";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(238, 139);
+            this.label16.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label16.Location = new System.Drawing.Point(311, 127);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 15);
+            this.label16.Size = new System.Drawing.Size(67, 18);
             this.label16.TabIndex = 15;
             this.label16.Text = "Lab Act 3";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(238, 165);
+            this.label15.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label15.Location = new System.Drawing.Point(311, 153);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 15);
+            this.label15.Size = new System.Drawing.Size(69, 18);
             this.label15.TabIndex = 14;
             this.label15.Text = "Lab Act 4";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(238, 88);
+            this.label14.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label14.Location = new System.Drawing.Point(311, 76);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 15);
+            this.label14.Size = new System.Drawing.Size(65, 18);
             this.label14.TabIndex = 13;
             this.label14.Text = "Lab Act 1";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(238, 64);
+            this.label13.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(311, 52);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 15);
+            this.label13.Size = new System.Drawing.Size(142, 18);
             this.label13.TabIndex = 12;
             this.label13.Text = "Lab Activities - 25%";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(27, 358);
+            this.label12.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label12.Location = new System.Drawing.Point(27, 346);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 15);
+            this.label12.Size = new System.Drawing.Size(162, 18);
             this.label12.TabIndex = 11;
             this.label12.Text = "Midterm exam average:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(26, 334);
+            this.label11.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label11.Location = new System.Drawing.Point(26, 322);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 15);
+            this.label11.Size = new System.Drawing.Size(104, 18);
             this.label11.TabIndex = 10;
             this.label11.Text = "Midterm exam";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(26, 310);
+            this.label10.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(26, 298);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 15);
+            this.label10.Size = new System.Drawing.Size(152, 18);
             this.label10.TabIndex = 9;
             this.label10.Text = "Midterm Exam - 30%";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(26, 263);
+            this.label9.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label9.Location = new System.Drawing.Point(26, 251);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 15);
+            this.label9.Size = new System.Drawing.Size(144, 18);
             this.label9.TabIndex = 8;
             this.label9.Text = "Assignment average:\r\n";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(25, 232);
+            this.label8.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label8.Location = new System.Drawing.Point(25, 220);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 15);
+            this.label8.Size = new System.Drawing.Size(96, 18);
             this.label8.TabIndex = 7;
             this.label8.Text = "Assignment 2";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 205);
+            this.label7.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label7.Location = new System.Drawing.Point(24, 193);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 15);
+            this.label7.Size = new System.Drawing.Size(94, 18);
             this.label7.TabIndex = 6;
             this.label7.Text = "Assignment 1";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 177);
+            this.label6.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(24, 165);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 15);
+            this.label6.Size = new System.Drawing.Size(132, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "Assignment - 20%";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 142);
+            this.label5.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(24, 130);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 15);
+            this.label5.Size = new System.Drawing.Size(96, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "Quiz average:\r\n";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 115);
+            this.label4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(24, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 15);
+            this.label4.Size = new System.Drawing.Size(48, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "Quiz 2";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 88);
+            this.label3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label3.Location = new System.Drawing.Point(24, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 15);
+            this.label3.Size = new System.Drawing.Size(46, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Quiz 1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 64);
+            this.label2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(23, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 15);
+            this.label2.Size = new System.Drawing.Size(101, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Quizzes - 25%";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 24);
+            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(24, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 15);
+            this.label1.Size = new System.Drawing.Size(228, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Midterm Grade Calculator";
             // 
