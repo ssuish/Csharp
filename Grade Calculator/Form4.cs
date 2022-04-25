@@ -50,52 +50,52 @@
                 {
                     case < 70:
                         labelLetterGrade.Text = "F";
-                        labelGradeRemarks.Text = "5.00";
+                        labelGradeRemarks.Text = "FAILED! Your Midterm Grade: 5.00";
                         break;
 
                     case >= 70 when midtermGrade <= 72:
                         labelLetterGrade.Text = "D";
-                        labelGradeRemarks.Text = "3.00";
+                        labelGradeRemarks.Text = "PASSED! Your Midterm Grade: 3.00";
                         break;
 
                     case >= 73 when midtermGrade <= 75:
                         labelLetterGrade.Text = "C-";
-                        labelGradeRemarks.Text = "2.75";
+                        labelGradeRemarks.Text = "PASSED! Your Midterm Grade: 2.75";
                         break;
 
                     case >= 76 when midtermGrade <= 78:
                         labelLetterGrade.Text = "C";
-                        labelGradeRemarks.Text = "2.50";
+                        labelGradeRemarks.Text = "PASSED! Your Midterm Grade: 2.50";
                         break;
 
                     case >= 79 when midtermGrade <= 81:
                         labelLetterGrade.Text = "C+";
-                        labelGradeRemarks.Text = "2.25";
+                        labelGradeRemarks.Text = "PASSED! Your Midterm Grade: 2.25";
                         break;
 
                     case >= 82 when midtermGrade <= 84:
                         labelLetterGrade.Text = "B-";
-                        labelGradeRemarks.Text = "2.00";
+                        labelGradeRemarks.Text = "PASSED! Your Midterm Grade: 2.00";
                         break;
 
                     case >= 85 when midtermGrade <= 88:
                         labelLetterGrade.Text = "B";
-                        labelGradeRemarks.Text = "1.75";
+                        labelGradeRemarks.Text = "PASSED! Your Midterm Grade: 1.75";
                         break;
 
                     case >= 89 when midtermGrade <= 92:
                         labelLetterGrade.Text = "B+";
-                        labelGradeRemarks.Text = "1.50";
+                        labelGradeRemarks.Text = "PASSED! Your Midterm Grade: 1.50";
                         break;
 
                     case >= 93 when midtermGrade <= 96:
                         labelLetterGrade.Text = "A-";
-                        labelGradeRemarks.Text = "1.25";
+                        labelGradeRemarks.Text = "PASSED! Your Midterm Grade: 1.25";
                         break;
 
                     case >= 97 when midtermGrade <= 100:
                         labelLetterGrade.Text = "A";
-                        labelGradeRemarks.Text = "1.00";
+                        labelGradeRemarks.Text = "PASSED! Your Midterm Grade: 1.00";
                         break;
 
                     default:
