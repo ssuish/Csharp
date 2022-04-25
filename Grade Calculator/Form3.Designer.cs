@@ -1,6 +1,6 @@
 ﻿namespace Grade_Calculator
 {
-    partial class Form3
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -35,25 +35,24 @@
             this.midtermToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.semestralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.summaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.button3 = new System.Windows.Forms.Button();
             this.changeColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.foregroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonShowSelectedCalculator = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonTotalGWA = new System.Windows.Forms.RadioButton();
+            this.radioButtonSemestral = new System.Windows.Forms.RadioButton();
+            this.radioButtonFinals = new System.Windows.Forms.RadioButton();
+            this.radioButtonMidterm = new System.Windows.Forms.RadioButton();
+            this.radioButtonPrelim = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonToLoginPage = new System.Windows.Forms.Button();
+            this.totalGWAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -74,8 +73,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.prelimCalculatorToolStripMenuItem,
-            this.summaryToolStripMenuItem});
+            this.prelimCalculatorToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -86,7 +84,8 @@
             this.prelimToolStripMenuItem,
             this.midtermToolStripMenuItem,
             this.finalsToolStripMenuItem,
-            this.semestralToolStripMenuItem});
+            this.semestralToolStripMenuItem,
+            this.totalGWAToolStripMenuItem});
             this.prelimCalculatorToolStripMenuItem.Name = "prelimCalculatorToolStripMenuItem";
             this.prelimCalculatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.prelimCalculatorToolStripMenuItem.Text = "Grade Calculator";
@@ -94,47 +93,30 @@
             // prelimToolStripMenuItem
             // 
             this.prelimToolStripMenuItem.Name = "prelimToolStripMenuItem";
-            this.prelimToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.prelimToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.prelimToolStripMenuItem.Text = "Prelim";
+            this.prelimToolStripMenuItem.Click += new System.EventHandler(this.prelimToolStripMenuItem_Click);
             // 
             // midtermToolStripMenuItem
             // 
             this.midtermToolStripMenuItem.Name = "midtermToolStripMenuItem";
-            this.midtermToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.midtermToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.midtermToolStripMenuItem.Text = "Midterm";
             this.midtermToolStripMenuItem.Click += new System.EventHandler(this.midtermToolStripMenuItem_Click);
             // 
             // finalsToolStripMenuItem
             // 
             this.finalsToolStripMenuItem.Name = "finalsToolStripMenuItem";
-            this.finalsToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.finalsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.finalsToolStripMenuItem.Text = "Finals";
+            this.finalsToolStripMenuItem.Click += new System.EventHandler(this.finalsToolStripMenuItem_Click);
             // 
             // semestralToolStripMenuItem
             // 
             this.semestralToolStripMenuItem.Name = "semestralToolStripMenuItem";
-            this.semestralToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.semestralToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.semestralToolStripMenuItem.Text = "Semestral";
-            // 
-            // summaryToolStripMenuItem
-            // 
-            this.summaryToolStripMenuItem.Name = "summaryToolStripMenuItem";
-            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.summaryToolStripMenuItem.Text = "Summary";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 437);
-            this.panel1.TabIndex = 1;
+            this.semestralToolStripMenuItem.Click += new System.EventHandler(this.semestralToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -144,6 +126,27 @@
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
             // 
+            // changeColorToolStripMenuItem
+            // 
+            this.changeColorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.foregroundToolStripMenuItem,
+            this.backgroundToolStripMenuItem});
+            this.changeColorToolStripMenuItem.Name = "changeColorToolStripMenuItem";
+            this.changeColorToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.changeColorToolStripMenuItem.Text = "Change Color";
+            // 
+            // foregroundToolStripMenuItem
+            // 
+            this.foregroundToolStripMenuItem.Name = "foregroundToolStripMenuItem";
+            this.foregroundToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.foregroundToolStripMenuItem.Text = "Foreground";
+            // 
+            // backgroundToolStripMenuItem
+            // 
+            this.backgroundToolStripMenuItem.Name = "backgroundToolStripMenuItem";
+            this.backgroundToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.backgroundToolStripMenuItem.Text = "Background";
+            // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -152,32 +155,103 @@
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
             // 
-            // button1
+            // helpToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(12, 373);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Back to Title";
-            this.button1.UseVisualStyleBackColor = true;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.helpToolStripMenuItem.Text = "Help";
             // 
-            // button2
+            // panel1
             // 
-            this.button2.Location = new System.Drawing.Point(12, 402);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Exit Form";
-            this.button2.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.buttonShowSelectedCalculator);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.buttonToLoginPage);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 437);
+            this.panel1.TabIndex = 1;
             // 
-            // label1
+            // buttonShowSelectedCalculator
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 30);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Welcome to \r\nGrade Calculator";
+            this.buttonShowSelectedCalculator.Location = new System.Drawing.Point(12, 277);
+            this.buttonShowSelectedCalculator.Name = "buttonShowSelectedCalculator";
+            this.buttonShowSelectedCalculator.Size = new System.Drawing.Size(61, 23);
+            this.buttonShowSelectedCalculator.TabIndex = 6;
+            this.buttonShowSelectedCalculator.Text = "Enter";
+            this.buttonShowSelectedCalculator.UseVisualStyleBackColor = true;
+            this.buttonShowSelectedCalculator.Click += new System.EventHandler(this.buttonShowSelectedCalculator_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButtonTotalGWA);
+            this.groupBox1.Controls.Add(this.radioButtonSemestral);
+            this.groupBox1.Controls.Add(this.radioButtonFinals);
+            this.groupBox1.Controls.Add(this.radioButtonMidterm);
+            this.groupBox1.Controls.Add(this.radioButtonPrelim);
+            this.groupBox1.Location = new System.Drawing.Point(12, 108);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(176, 163);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Choose a calculator";
+            // 
+            // radioButtonTotalGWA
+            // 
+            this.radioButtonTotalGWA.AutoSize = true;
+            this.radioButtonTotalGWA.Location = new System.Drawing.Point(6, 122);
+            this.radioButtonTotalGWA.Name = "radioButtonTotalGWA";
+            this.radioButtonTotalGWA.Size = new System.Drawing.Size(80, 19);
+            this.radioButtonTotalGWA.TabIndex = 7;
+            this.radioButtonTotalGWA.TabStop = true;
+            this.radioButtonTotalGWA.Text = "Total GWA";
+            this.radioButtonTotalGWA.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonSemestral
+            // 
+            this.radioButtonSemestral.AutoSize = true;
+            this.radioButtonSemestral.Location = new System.Drawing.Point(6, 97);
+            this.radioButtonSemestral.Name = "radioButtonSemestral";
+            this.radioButtonSemestral.Size = new System.Drawing.Size(76, 19);
+            this.radioButtonSemestral.TabIndex = 6;
+            this.radioButtonSemestral.TabStop = true;
+            this.radioButtonSemestral.Text = "Semestral";
+            this.radioButtonSemestral.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonFinals
+            // 
+            this.radioButtonFinals.AutoSize = true;
+            this.radioButtonFinals.Location = new System.Drawing.Point(6, 72);
+            this.radioButtonFinals.Name = "radioButtonFinals";
+            this.radioButtonFinals.Size = new System.Drawing.Size(55, 19);
+            this.radioButtonFinals.TabIndex = 5;
+            this.radioButtonFinals.TabStop = true;
+            this.radioButtonFinals.Text = "Finals";
+            this.radioButtonFinals.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMidterm
+            // 
+            this.radioButtonMidterm.AutoSize = true;
+            this.radioButtonMidterm.Location = new System.Drawing.Point(6, 47);
+            this.radioButtonMidterm.Name = "radioButtonMidterm";
+            this.radioButtonMidterm.Size = new System.Drawing.Size(71, 19);
+            this.radioButtonMidterm.TabIndex = 4;
+            this.radioButtonMidterm.TabStop = true;
+            this.radioButtonMidterm.Text = "Midterm";
+            this.radioButtonMidterm.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPrelim
+            // 
+            this.radioButtonPrelim.AutoSize = true;
+            this.radioButtonPrelim.Location = new System.Drawing.Point(6, 22);
+            this.radioButtonPrelim.Name = "radioButtonPrelim";
+            this.radioButtonPrelim.Size = new System.Drawing.Size(59, 19);
+            this.radioButtonPrelim.TabIndex = 3;
+            this.radioButtonPrelim.TabStop = true;
+            this.radioButtonPrelim.Text = "Prelim";
+            this.radioButtonPrelim.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -188,112 +262,33 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Prepared by: ";
             // 
-            // groupBox1
+            // label1
             // 
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 108);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(176, 163);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Choose a calculator";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 30);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Welcome to \r\nGrade Calculator";
             // 
-            // radioButton1
+            // buttonToLoginPage
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(59, 19);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Prelim";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.buttonToLoginPage.Location = new System.Drawing.Point(12, 373);
+            this.buttonToLoginPage.Name = "buttonToLoginPage";
+            this.buttonToLoginPage.Size = new System.Drawing.Size(95, 23);
+            this.buttonToLoginPage.TabIndex = 3;
+            this.buttonToLoginPage.Text = "Back to Title";
+            this.buttonToLoginPage.UseVisualStyleBackColor = true;
+            this.buttonToLoginPage.Click += new System.EventHandler(this.buttonToLoginPage_Click);
             // 
-            // radioButton2
+            // totalGWAToolStripMenuItem
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 47);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 19);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Midterm";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.totalGWAToolStripMenuItem.Name = "totalGWAToolStripMenuItem";
+            this.totalGWAToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.totalGWAToolStripMenuItem.Text = "Total GWA";
+            this.totalGWAToolStripMenuItem.Click += new System.EventHandler(this.totalGWAToolStripMenuItem_Click);
             // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 72);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(55, 19);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Finals";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 97);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(76, 19);
-            this.radioButton4.TabIndex = 6;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Semestral";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(6, 122);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(80, 19);
-            this.radioButton5.TabIndex = 7;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Total GWA";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(12, 277);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(61, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Enter";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // changeColorToolStripMenuItem
-            // 
-            this.changeColorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.foregroundToolStripMenuItem,
-            this.backgroundToolStripMenuItem});
-            this.changeColorToolStripMenuItem.Name = "changeColorToolStripMenuItem";
-            this.changeColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.changeColorToolStripMenuItem.Text = "Change Color";
-            // 
-            // foregroundToolStripMenuItem
-            // 
-            this.foregroundToolStripMenuItem.Name = "foregroundToolStripMenuItem";
-            this.foregroundToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.foregroundToolStripMenuItem.Text = "Foreground";
-            // 
-            // backgroundToolStripMenuItem
-            // 
-            this.backgroundToolStripMenuItem.Name = "backgroundToolStripMenuItem";
-            this.backgroundToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.backgroundToolStripMenuItem.Text = "Background";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // Form3
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -302,7 +297,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form3";
+            this.Name = "FormMain";
             this.Text = "Form3";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -325,23 +320,22 @@
         private ToolStripMenuItem midtermToolStripMenuItem;
         private ToolStripMenuItem finalsToolStripMenuItem;
         private ToolStripMenuItem semestralToolStripMenuItem;
-        private ToolStripMenuItem summaryToolStripMenuItem;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem viewToolStripMenuItem;
         private Label label2;
         private Label label1;
-        private Button button2;
-        private Button button1;
+        private Button buttonToLoginPage;
         private GroupBox groupBox1;
-        private RadioButton radioButton5;
-        private RadioButton radioButton4;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private Button button3;
+        private RadioButton radioButtonTotalGWA;
+        private RadioButton radioButtonSemestral;
+        private RadioButton radioButtonFinals;
+        private RadioButton radioButtonMidterm;
+        private RadioButton radioButtonPrelim;
+        private Button buttonShowSelectedCalculator;
         private ToolStripMenuItem changeColorToolStripMenuItem;
         private ToolStripMenuItem foregroundToolStripMenuItem;
         private ToolStripMenuItem backgroundToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem totalGWAToolStripMenuItem;
     }
 }

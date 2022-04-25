@@ -47,7 +47,7 @@ namespace Grade_Calculator
                         cap = "Login Successful";
                         msg = "Welcome to Grade Calculator!";
                         MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Form3 mainMenu = new Form3();
+                        FormMain mainMenu = new FormMain();
                         this.Hide();
                         mainMenu.Show();
                     }
