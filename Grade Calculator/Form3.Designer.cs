@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prelimCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,6 +36,7 @@
             this.midtermToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.semestralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.totalGWAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.foregroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,10 +51,9 @@
             this.radioButtonFinals = new System.Windows.Forms.RadioButton();
             this.radioButtonMidterm = new System.Windows.Forms.RadioButton();
             this.radioButtonPrelim = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonToLoginPage = new System.Windows.Forms.Button();
-            this.totalGWAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -66,6 +67,7 @@
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -87,36 +89,43 @@
             this.semestralToolStripMenuItem,
             this.totalGWAToolStripMenuItem});
             this.prelimCalculatorToolStripMenuItem.Name = "prelimCalculatorToolStripMenuItem";
-            this.prelimCalculatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prelimCalculatorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.prelimCalculatorToolStripMenuItem.Text = "Grade Calculator";
             // 
             // prelimToolStripMenuItem
             // 
             this.prelimToolStripMenuItem.Name = "prelimToolStripMenuItem";
-            this.prelimToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prelimToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.prelimToolStripMenuItem.Text = "Prelim";
             this.prelimToolStripMenuItem.Click += new System.EventHandler(this.prelimToolStripMenuItem_Click);
             // 
             // midtermToolStripMenuItem
             // 
             this.midtermToolStripMenuItem.Name = "midtermToolStripMenuItem";
-            this.midtermToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.midtermToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.midtermToolStripMenuItem.Text = "Midterm";
             this.midtermToolStripMenuItem.Click += new System.EventHandler(this.midtermToolStripMenuItem_Click);
             // 
             // finalsToolStripMenuItem
             // 
             this.finalsToolStripMenuItem.Name = "finalsToolStripMenuItem";
-            this.finalsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.finalsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.finalsToolStripMenuItem.Text = "Finals";
             this.finalsToolStripMenuItem.Click += new System.EventHandler(this.finalsToolStripMenuItem_Click);
             // 
             // semestralToolStripMenuItem
             // 
             this.semestralToolStripMenuItem.Name = "semestralToolStripMenuItem";
-            this.semestralToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.semestralToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.semestralToolStripMenuItem.Text = "Semestral";
             this.semestralToolStripMenuItem.Click += new System.EventHandler(this.semestralToolStripMenuItem_Click);
+            // 
+            // totalGWAToolStripMenuItem
+            // 
+            this.totalGWAToolStripMenuItem.Name = "totalGWAToolStripMenuItem";
+            this.totalGWAToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.totalGWAToolStripMenuItem.Text = "Total GWA";
+            this.totalGWAToolStripMenuItem.Click += new System.EventHandler(this.totalGWAToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -163,24 +172,34 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonShowSelectedCalculator);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.buttonToLoginPage);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 437);
+            this.panel1.Size = new System.Drawing.Size(229, 437);
             this.panel1.TabIndex = 1;
             // 
             // buttonShowSelectedCalculator
             // 
-            this.buttonShowSelectedCalculator.Location = new System.Drawing.Point(12, 277);
+            this.buttonShowSelectedCalculator.FlatAppearance.BorderSize = 0;
+            this.buttonShowSelectedCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonShowSelectedCalculator.Image = ((System.Drawing.Image)(resources.GetObject("buttonShowSelectedCalculator.Image")));
+            this.buttonShowSelectedCalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonShowSelectedCalculator.Location = new System.Drawing.Point(14, 313);
+            this.buttonShowSelectedCalculator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonShowSelectedCalculator.Name = "buttonShowSelectedCalculator";
-            this.buttonShowSelectedCalculator.Size = new System.Drawing.Size(61, 23);
+            this.buttonShowSelectedCalculator.Size = new System.Drawing.Size(89, 41);
             this.buttonShowSelectedCalculator.TabIndex = 6;
-            this.buttonShowSelectedCalculator.Text = "Enter";
+            this.buttonShowSelectedCalculator.Text = " Enter";
+            this.buttonShowSelectedCalculator.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonShowSelectedCalculator.UseVisualStyleBackColor = true;
             this.buttonShowSelectedCalculator.Click += new System.EventHandler(this.buttonShowSelectedCalculator_Click);
             // 
@@ -191,9 +210,12 @@
             this.groupBox1.Controls.Add(this.radioButtonFinals);
             this.groupBox1.Controls.Add(this.radioButtonMidterm);
             this.groupBox1.Controls.Add(this.radioButtonPrelim);
-            this.groupBox1.Location = new System.Drawing.Point(12, 108);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(14, 130);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(176, 163);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(201, 175);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choose a calculator";
@@ -201,9 +223,10 @@
             // radioButtonTotalGWA
             // 
             this.radioButtonTotalGWA.AutoSize = true;
-            this.radioButtonTotalGWA.Location = new System.Drawing.Point(6, 122);
+            this.radioButtonTotalGWA.Location = new System.Drawing.Point(7, 146);
+            this.radioButtonTotalGWA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonTotalGWA.Name = "radioButtonTotalGWA";
-            this.radioButtonTotalGWA.Size = new System.Drawing.Size(80, 19);
+            this.radioButtonTotalGWA.Size = new System.Drawing.Size(92, 22);
             this.radioButtonTotalGWA.TabIndex = 7;
             this.radioButtonTotalGWA.TabStop = true;
             this.radioButtonTotalGWA.Text = "Total GWA";
@@ -212,9 +235,10 @@
             // radioButtonSemestral
             // 
             this.radioButtonSemestral.AutoSize = true;
-            this.radioButtonSemestral.Location = new System.Drawing.Point(6, 97);
+            this.radioButtonSemestral.Location = new System.Drawing.Point(7, 116);
+            this.radioButtonSemestral.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonSemestral.Name = "radioButtonSemestral";
-            this.radioButtonSemestral.Size = new System.Drawing.Size(76, 19);
+            this.radioButtonSemestral.Size = new System.Drawing.Size(90, 22);
             this.radioButtonSemestral.TabIndex = 6;
             this.radioButtonSemestral.TabStop = true;
             this.radioButtonSemestral.Text = "Semestral";
@@ -223,9 +247,10 @@
             // radioButtonFinals
             // 
             this.radioButtonFinals.AutoSize = true;
-            this.radioButtonFinals.Location = new System.Drawing.Point(6, 72);
+            this.radioButtonFinals.Location = new System.Drawing.Point(7, 86);
+            this.radioButtonFinals.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonFinals.Name = "radioButtonFinals";
-            this.radioButtonFinals.Size = new System.Drawing.Size(55, 19);
+            this.radioButtonFinals.Size = new System.Drawing.Size(63, 22);
             this.radioButtonFinals.TabIndex = 5;
             this.radioButtonFinals.TabStop = true;
             this.radioButtonFinals.Text = "Finals";
@@ -234,9 +259,10 @@
             // radioButtonMidterm
             // 
             this.radioButtonMidterm.AutoSize = true;
-            this.radioButtonMidterm.Location = new System.Drawing.Point(6, 47);
+            this.radioButtonMidterm.Location = new System.Drawing.Point(7, 56);
+            this.radioButtonMidterm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonMidterm.Name = "radioButtonMidterm";
-            this.radioButtonMidterm.Size = new System.Drawing.Size(71, 19);
+            this.radioButtonMidterm.Size = new System.Drawing.Size(82, 22);
             this.radioButtonMidterm.TabIndex = 4;
             this.radioButtonMidterm.TabStop = true;
             this.radioButtonMidterm.Text = "Midterm";
@@ -245,58 +271,63 @@
             // radioButtonPrelim
             // 
             this.radioButtonPrelim.AutoSize = true;
-            this.radioButtonPrelim.Location = new System.Drawing.Point(6, 22);
+            this.radioButtonPrelim.Location = new System.Drawing.Point(7, 26);
+            this.radioButtonPrelim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonPrelim.Name = "radioButtonPrelim";
-            this.radioButtonPrelim.Size = new System.Drawing.Size(59, 19);
+            this.radioButtonPrelim.Size = new System.Drawing.Size(68, 22);
             this.radioButtonPrelim.TabIndex = 3;
             this.radioButtonPrelim.TabStop = true;
             this.radioButtonPrelim.Text = "Prelim";
             this.radioButtonPrelim.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 337);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Prepared by: ";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 30);
+            this.label1.Size = new System.Drawing.Size(195, 58);
             this.label1.TabIndex = 3;
             this.label1.Text = "Welcome to \r\nGrade Calculator";
             // 
             // buttonToLoginPage
             // 
-            this.buttonToLoginPage.Location = new System.Drawing.Point(12, 373);
+            this.buttonToLoginPage.Location = new System.Drawing.Point(14, 448);
+            this.buttonToLoginPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonToLoginPage.Name = "buttonToLoginPage";
-            this.buttonToLoginPage.Size = new System.Drawing.Size(95, 23);
+            this.buttonToLoginPage.Size = new System.Drawing.Size(109, 28);
             this.buttonToLoginPage.TabIndex = 3;
             this.buttonToLoginPage.Text = "Back to Title";
             this.buttonToLoginPage.UseVisualStyleBackColor = true;
             this.buttonToLoginPage.Click += new System.EventHandler(this.buttonToLoginPage_Click);
             // 
-            // totalGWAToolStripMenuItem
+            // button1
             // 
-            this.totalGWAToolStripMenuItem.Name = "totalGWAToolStripMenuItem";
-            this.totalGWAToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.totalGWAToolStripMenuItem.Text = "Total GWA";
-            this.totalGWAToolStripMenuItem.Click += new System.EventHandler(this.totalGWAToolStripMenuItem_Click);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(14, 362);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 41);
+            this.button1.TabIndex = 7;
+            this.button1.Text = " Back to Login";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.Color.White;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormMain";
             this.Text = "Form3";
             this.menuStrip1.ResumeLayout(false);
@@ -322,7 +353,6 @@
         private ToolStripMenuItem semestralToolStripMenuItem;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem viewToolStripMenuItem;
-        private Label label2;
         private Label label1;
         private Button buttonToLoginPage;
         private GroupBox groupBox1;
@@ -337,5 +367,6 @@
         private ToolStripMenuItem backgroundToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem totalGWAToolStripMenuItem;
+        private Button button1;
     }
 }

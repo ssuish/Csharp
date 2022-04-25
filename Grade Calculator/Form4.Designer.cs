@@ -1,6 +1,6 @@
 ﻿namespace Grade_Calculator
 {
-    partial class Form4
+    partial class FormMidtermCalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -422,15 +422,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Midterm Grade Calculator";
             // 
-            // Form4
+            // FormMidtermCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 398);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form4";
-            this.Text = "Form4";
+            this.Name = "FormMidtermCalculator";
+            this.Text = "FormMidtermCalculator";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

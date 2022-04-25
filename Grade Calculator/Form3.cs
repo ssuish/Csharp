@@ -17,7 +17,7 @@ namespace Grade_Calculator
             InitializeComponent();
         }
 
-        Form4 midterm;
+        FormMidtermCalculator midterm;
 
         private void UnavailableFeature()
         {
@@ -31,7 +31,7 @@ namespace Grade_Calculator
         {
             if (midterm is null)
             {
-                midterm = new Form4();
+                midterm = new FormMidtermCalculator();
                 midterm.MdiParent = this;
                 midterm.FormClosed += Midterm_FormClosed;
                 midterm.Show();
@@ -83,7 +83,7 @@ namespace Grade_Calculator
             {
                 if (midterm is null)
                 {
-                    midterm = new Form4();
+                    midterm = new FormMidtermCalculator();
                     midterm.MdiParent = this;
                     midterm.FormClosed += Midterm_FormClosed;
                     midterm.Show();
