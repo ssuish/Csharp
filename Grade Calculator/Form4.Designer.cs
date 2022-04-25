@@ -122,7 +122,7 @@
             this.labelLetterGrade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLetterGrade.AutoSize = true;
             this.labelLetterGrade.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelLetterGrade.Location = new System.Drawing.Point(436, 352);
+            this.labelLetterGrade.Location = new System.Drawing.Point(414, 347);
             this.labelLetterGrade.Name = "labelLetterGrade";
             this.labelLetterGrade.Size = new System.Drawing.Size(61, 37);
             this.labelLetterGrade.TabIndex = 36;
@@ -133,7 +133,7 @@
             this.labelGradeRemarks.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelGradeRemarks.AutoSize = true;
             this.labelGradeRemarks.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelGradeRemarks.Location = new System.Drawing.Point(274, 368);
+            this.labelGradeRemarks.Location = new System.Drawing.Point(274, 394);
             this.labelGradeRemarks.Name = "labelGradeRemarks";
             this.labelGradeRemarks.Size = new System.Drawing.Size(62, 18);
             this.labelGradeRemarks.TabIndex = 35;
@@ -144,7 +144,7 @@
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(274, 340);
+            this.label21.Location = new System.Drawing.Point(274, 366);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(73, 18);
             this.label21.TabIndex = 34;
@@ -266,7 +266,7 @@
             // 
             this.textBoxQuizAve.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxQuizAve.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxQuizAve.Location = new System.Drawing.Point(205, 150);
+            this.textBoxQuizAve.Location = new System.Drawing.Point(205, 148);
             this.textBoxQuizAve.Name = "textBoxQuizAve";
             this.textBoxQuizAve.Size = new System.Drawing.Size(41, 23);
             this.textBoxQuizAve.TabIndex = 21;
@@ -275,7 +275,7 @@
             // 
             this.textBoxQuiz2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxQuiz2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxQuiz2.Location = new System.Drawing.Point(205, 121);
+            this.textBoxQuiz2.Location = new System.Drawing.Point(205, 119);
             this.textBoxQuiz2.Name = "textBoxQuiz2";
             this.textBoxQuiz2.Size = new System.Drawing.Size(41, 23);
             this.textBoxQuiz2.TabIndex = 20;
@@ -284,7 +284,7 @@
             // 
             this.textBoxQuiz1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxQuiz1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxQuiz1.Location = new System.Drawing.Point(205, 91);
+            this.textBoxQuiz1.Location = new System.Drawing.Point(205, 89);
             this.textBoxQuiz1.Name = "textBoxQuiz1";
             this.textBoxQuiz1.Size = new System.Drawing.Size(41, 23);
             this.textBoxQuiz1.TabIndex = 19;
@@ -312,7 +312,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label18.Location = new System.Drawing.Point(314, 197);
+            this.label18.Location = new System.Drawing.Point(313, 216);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(115, 18);
             this.label18.TabIndex = 17;
@@ -324,7 +324,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label17.Location = new System.Drawing.Point(314, 121);
+            this.label17.Location = new System.Drawing.Point(314, 126);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(67, 18);
             this.label17.TabIndex = 16;
@@ -336,7 +336,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label16.Location = new System.Drawing.Point(314, 145);
+            this.label16.Location = new System.Drawing.Point(314, 155);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(67, 18);
             this.label16.TabIndex = 15;
@@ -348,7 +348,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label15.Location = new System.Drawing.Point(314, 171);
+            this.label15.Location = new System.Drawing.Point(314, 184);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(69, 18);
             this.label15.TabIndex = 14;
@@ -360,7 +360,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label14.Location = new System.Drawing.Point(314, 94);
+            this.label14.Location = new System.Drawing.Point(316, 96);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(65, 18);
             this.label14.TabIndex = 13;
