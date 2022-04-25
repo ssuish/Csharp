@@ -55,7 +55,7 @@ namespace Grade_Calculator
                     {
                         cap = "Login Failed";
                         msg = "Invalid Password";
-                        MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch
@@ -80,10 +80,17 @@ namespace Grade_Calculator
             {
                 string runTimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 string dataDirectory = Path.Combine(runTimeDirectory, "Data");
-                File.Delete(Path.Combine(dataDirectory, "userData.txt"));
-                string cap = "Account Deleted";
-                string msg = "Account has been deleted. Please login again. Thank you";
-                MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                string cap = "Account Deletion";
+                string msg = "For your security, you're not able to recover password.   " +
+                    "\nDo you wish to continue?";
+                DialogResult delAccount = MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (delAccount == DialogResult.OK)
+                {
+                    File.Delete(Path.Combine(dataDirectory, "userData.txt"));
+                    cap = "Account Deleted";
+                    msg = "Your account is now deleted. Please sign-in again. Thank you!";
+                    MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
@@ -99,7 +106,7 @@ namespace Grade_Calculator
                 "- Midterm Calculator \n- Log-in Page with Authentication \n- Multi-Document Interface \n" +
                 "- Database (Currently via Text File) \n- Menustrip (File toolstrip) " +
                 " \n\n Thank you for your consideration";
-            MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }
