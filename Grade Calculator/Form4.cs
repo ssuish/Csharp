@@ -31,10 +31,10 @@
                 la3 = double.Parse(textBoxLA3.Text);
                 la4 = double.Parse(textBoxLA4.Text);
 
-                quizAve = Math.Round(((quiz1 + quiz2) / 80 * 100) * 0.25);
-                asAve = Math.Round(((as1 + as2) / 2) * 0.20);
-                examAve = Math.Round(((exam / 40) * 100) * 0.30);
-                laAve = Math.Round(((la1 + la2 + la3 + la4) / 4) * 0.25);
+                quizAve = ((quiz1 + quiz2) / 80 * 100) * 0.25;
+                asAve = ((as1 + as2) / 2) * 0.20;
+                examAve = ((exam / 40) * 100) * 0.30;
+                laAve = ((la1 + la2 + la3 + la4) / 4) * 0.25;
                 midtermGrade = Math.Round(quizAve + asAve + examAve + laAve);
 
                 if (!checkInputIfInvalid())
@@ -119,35 +119,35 @@
                 if (!(quizAve >= 0 && quizAve <= 25))
                 {
                     cap = "Invalid Input";
-                    msg = "Input in quizzes is invalid!";
+                    msg = "Input in quizzes must not be over 80 or less than 0!";
                     MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return true;
                 }
                 else if (!(asAve >= 0 && asAve <= 20))
                 {
                     cap = "Invalid Input";
-                    msg = "Input in assignment is invalid!";
+                    msg = "Input in assignment must not be over 100 or less than 0!";
                     MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return true;
                 }
                 else if (!(examAve >= 0 && examAve <= 30))
                 {
                     cap = "Invalid Input";
-                    msg = "Input in exam is invalid!";
+                    msg = "Input in exam must not be over 40 or less than 0!";
                     MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return true;
                 }
                 else if (!(laAve >= 0 && laAve <= 25))
                 {
                     cap = "Invalid Input";
-                    msg = "Input in laboratory activities is invalid! " + laAve;
+                    msg = "Input in laboratory activities must not be over 100 or less than 0! " + laAve;
                     MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return true;
                 }
                 else if (!(midtermGrade >= 0 && midtermGrade <= 100))
                 {
                     cap = "Invalid Input";
-                    msg = "Midterm grade is less than 0 or more than 100!";
+                    msg = "Midterm grade must not be less than 0 or more than 100!";
                     MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return true;
                 }

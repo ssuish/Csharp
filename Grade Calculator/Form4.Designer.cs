@@ -178,6 +178,7 @@
             this.textBoxLAAverage.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxLAAverage.Location = new System.Drawing.Point(434, 208);
             this.textBoxLAAverage.Name = "textBoxLAAverage";
+            this.textBoxLAAverage.ReadOnly = true;
             this.textBoxLAAverage.Size = new System.Drawing.Size(41, 23);
             this.textBoxLAAverage.TabIndex = 31;
             // 
@@ -223,6 +224,7 @@
             this.textBoxExamAverage.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxExamAverage.Location = new System.Drawing.Point(205, 361);
             this.textBoxExamAverage.Name = "textBoxExamAverage";
+            this.textBoxExamAverage.ReadOnly = true;
             this.textBoxExamAverage.Size = new System.Drawing.Size(41, 23);
             this.textBoxExamAverage.TabIndex = 26;
             // 
@@ -241,6 +243,7 @@
             this.textBoxASAverage.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxASAverage.Location = new System.Drawing.Point(205, 266);
             this.textBoxASAverage.Name = "textBoxASAverage";
+            this.textBoxASAverage.ReadOnly = true;
             this.textBoxASAverage.Size = new System.Drawing.Size(41, 23);
             this.textBoxASAverage.TabIndex = 24;
             // 
@@ -268,6 +271,7 @@
             this.textBoxQuizAve.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxQuizAve.Location = new System.Drawing.Point(205, 148);
             this.textBoxQuizAve.Name = "textBoxQuizAve";
+            this.textBoxQuizAve.ReadOnly = true;
             this.textBoxQuizAve.Size = new System.Drawing.Size(41, 23);
             this.textBoxQuizAve.TabIndex = 21;
             // 
