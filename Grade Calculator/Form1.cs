@@ -22,9 +22,9 @@ namespace Grade_Calculator
             {
                 Security aes = new Security();
 
-                string runTimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); // locate current dir
-                string dataDirectory = Path.Combine(runTimeDirectory, "Data"); // create folder 
-                StreamReader reader = new StreamReader(Path.Combine(dataDirectory, "userData.txt")); // create file 
+                string runTimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string dataDirectory = Path.Combine(runTimeDirectory, "Data");
+                StreamReader reader = new StreamReader(Path.Combine(dataDirectory, "userData.txt"));
 
                 try
                 {
@@ -54,7 +54,7 @@ namespace Grade_Calculator
                     else
                     {
                         cap = "Login Failed";
-                        msg = "Invalid Password";
+                        msg = "Empty or Invalid Password!";
                         MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }

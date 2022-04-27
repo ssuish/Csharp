@@ -44,6 +44,7 @@
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonBacktoLogin = new System.Windows.Forms.Button();
             this.buttonShowSelectedCalculator = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonTotalGWA = new System.Windows.Forms.RadioButton();
@@ -52,8 +53,6 @@
             this.radioButtonMidterm = new System.Windows.Forms.RadioButton();
             this.radioButtonPrelim = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonToLoginPage = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -175,17 +174,32 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonBacktoLogin);
             this.panel1.Controls.Add(this.buttonShowSelectedCalculator);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.buttonToLoginPage);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(229, 437);
             this.panel1.TabIndex = 1;
+            // 
+            // buttonBacktoLogin
+            // 
+            this.buttonBacktoLogin.FlatAppearance.BorderSize = 0;
+            this.buttonBacktoLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBacktoLogin.Image = ((System.Drawing.Image)(resources.GetObject("buttonBacktoLogin.Image")));
+            this.buttonBacktoLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBacktoLogin.Location = new System.Drawing.Point(14, 362);
+            this.buttonBacktoLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonBacktoLogin.Name = "buttonBacktoLogin";
+            this.buttonBacktoLogin.Size = new System.Drawing.Size(136, 41);
+            this.buttonBacktoLogin.TabIndex = 7;
+            this.buttonBacktoLogin.Text = " Back to Login";
+            this.buttonBacktoLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBacktoLogin.UseVisualStyleBackColor = true;
+            this.buttonBacktoLogin.Click += new System.EventHandler(this.buttonBacktoLogin_Click);
             // 
             // buttonShowSelectedCalculator
             // 
@@ -290,32 +304,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Welcome to \r\nGrade Calculator";
             // 
-            // buttonToLoginPage
-            // 
-            this.buttonToLoginPage.Location = new System.Drawing.Point(14, 448);
-            this.buttonToLoginPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonToLoginPage.Name = "buttonToLoginPage";
-            this.buttonToLoginPage.Size = new System.Drawing.Size(109, 28);
-            this.buttonToLoginPage.TabIndex = 3;
-            this.buttonToLoginPage.Text = "Back to Title";
-            this.buttonToLoginPage.UseVisualStyleBackColor = true;
-            this.buttonToLoginPage.Click += new System.EventHandler(this.buttonToLoginPage_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(14, 362);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 41);
-            this.button1.TabIndex = 7;
-            this.button1.Text = " Back to Login";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -329,7 +317,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormMain";
-            this.Text = "Form3";
+            this.Text = "Grade Calculator App";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -354,7 +342,6 @@
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem viewToolStripMenuItem;
         private Label label1;
-        private Button buttonToLoginPage;
         private GroupBox groupBox1;
         private RadioButton radioButtonTotalGWA;
         private RadioButton radioButtonSemestral;
@@ -367,6 +354,6 @@
         private ToolStripMenuItem backgroundToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem totalGWAToolStripMenuItem;
-        private Button button1;
+        private Button buttonBacktoLogin;
     }
 }
