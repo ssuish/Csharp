@@ -29,17 +29,26 @@ namespace Grade_Calculator
 
         private void ToFormMidtermCalc()
         {
-            if (midterm is null)
+            try
             {
-                midterm = new FormMidtermCalculator();
-                midterm.MdiParent = this;
-                midterm.FormClosed += Midterm_FormClosed;
-                midterm.Show();
-                midterm.WindowState = FormWindowState.Maximized;
+
+
+                if (midterm is null)
+                {
+                    midterm = new FormMidtermCalculator();
+                    midterm.MdiParent = this;
+                    midterm.FormClosed += Midterm_FormClosed;
+                    midterm.Show();
+                    midterm.WindowState = FormWindowState.Maximized;
+                }
+                else
+                {
+                    midterm.Activate();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                midterm.Activate();
+                MessageBox.Show("Fatal error occured.\n" + ex);
             }
         }
 
@@ -75,36 +84,43 @@ namespace Grade_Calculator
 
         private void buttonShowSelectedCalculator_Click(object sender, EventArgs e)
         {
-            if (radioButtonPrelim.Checked)
+            try
             {
-                UnavailableFeature();
-            }
-            else if (radioButtonMidterm.Checked)
-            {
-                if (midterm is null)
+                if (radioButtonPrelim.Checked)
                 {
-                    midterm = new FormMidtermCalculator();
-                    midterm.MdiParent = this;
-                    midterm.FormClosed += Midterm_FormClosed;
-                    midterm.Show();
-                    midterm.WindowState = FormWindowState.Maximized;
+                    UnavailableFeature();
                 }
-                else
+                else if (radioButtonMidterm.Checked)
                 {
-                    midterm.Activate();
+                    if (midterm is null)
+                    {
+                        midterm = new FormMidtermCalculator();
+                        midterm.MdiParent = this;
+                        midterm.FormClosed += Midterm_FormClosed;
+                        midterm.Show();
+                        midterm.WindowState = FormWindowState.Maximized;
+                    }
+                    else
+                    {
+                        midterm.Activate();
+                    }
+                }
+                else if (radioButtonFinals.Checked)
+                {
+                    UnavailableFeature();
+                }
+                else if (radioButtonSemestral.Checked)
+                {
+                    UnavailableFeature();
+                }
+                else if (radioButtonTotalGWA.Checked)
+                {
+                    UnavailableFeature();
                 }
             }
-            else if (radioButtonFinals.Checked)
+            catch (Exception ex)
             {
-                UnavailableFeature();
-            }
-            else if (radioButtonSemestral.Checked)
-            {
-                UnavailableFeature();
-            }
-            else if (radioButtonTotalGWA.Checked)
-            {
-                UnavailableFeature();
+                MessageBox.Show("Fatal error occured.\n" + ex);
             }
         }
 
@@ -115,6 +131,31 @@ namespace Grade_Calculator
             login.Show();
         }
 
-        
+        private void changeColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog forecolor = new ColorDialog();
+            forecolor.AllowFullOpen = true;
+            if (forecolor.ShowDialog() == DialogResult.OK)
+            {
+                panelMain.ForeColor = forecolor.Color;
+                groupBoxCalc.ForeColor = forecolor.Color;
+            }
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string cap = "Help";
+            string msg = "Formula Used\n\n" +
+                "Quizzes - 25%\n" +
+                "Quiz 1 & 2 = 40 items\n\n" +
+                "Assignments - 20%\n" +
+                "Assignments 1 & 2 = 100 items\n\n" +
+                "Lab Activities - 25%\n" +
+                "Lab Act 1, 2, 3, 4 = 100 items\n\n" +
+                "Midterm Exam - 30%\n" +
+                "Midterm Exam = 40 items\n\n" +
+                "Midterm Grade = Quizzes + Assignments + Lab Activity + Midterm Exam";
+            MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

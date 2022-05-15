@@ -26,6 +26,22 @@ namespace Grade_Calculator
             login.Show();
         }
 
+        private bool checkFieldsIfNotEmpty()
+        { 
+            if (!(textBoxLogUsername.Text is null || textBoxLogUsername.Text.Length == 0))
+            {
+                if (!(textBoxEmail.Text is null || textBoxEmail.Text.Length == 0))
+                {
+                    if (!(textBoxLogPwrd.Text is null || textBoxLogPwrd.Text.Length == 0))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
         private void buttonSignup_Click(object sender, EventArgs e)
         {
             try
@@ -35,7 +51,7 @@ namespace Grade_Calculator
                 string cap = string.Empty;
                 string msg = string.Empty;
 
-                if (textBoxLogPwrd.Text == textBoxRepeatPwrd.Text)
+                if (checkFieldsIfNotEmpty())
                 {
                     string userInfo = textBoxLogUsername.Text + "," + textBoxLogPwrd.Text;
                     string loginToken = aes.Encrypt(userInfo);

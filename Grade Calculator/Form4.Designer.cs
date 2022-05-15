@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMidtermCalculator));
+            this.panelMT = new System.Windows.Forms.Panel();
             this.labelLetterGrade = new System.Windows.Forms.Label();
             this.labelGradeRemarks = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -66,53 +67,55 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelMT.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelMT
             // 
-            this.panel1.Controls.Add(this.labelLetterGrade);
-            this.panel1.Controls.Add(this.labelGradeRemarks);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.labelResultMTGrade);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.textBoxLAAverage);
-            this.panel1.Controls.Add(this.textBoxLA4);
-            this.panel1.Controls.Add(this.textBoxLA3);
-            this.panel1.Controls.Add(this.textBoxLA2);
-            this.panel1.Controls.Add(this.textBoxLA1);
-            this.panel1.Controls.Add(this.textBoxExamAverage);
-            this.panel1.Controls.Add(this.textBoxExam);
-            this.panel1.Controls.Add(this.textBoxASAverage);
-            this.panel1.Controls.Add(this.textBoxAS2);
-            this.panel1.Controls.Add(this.textBoxAS1);
-            this.panel1.Controls.Add(this.textBoxQuizAve);
-            this.panel1.Controls.Add(this.textBoxQuiz2);
-            this.panel1.Controls.Add(this.textBoxQuiz1);
-            this.panel1.Controls.Add(this.buttonComputeGrade);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(568, 398);
-            this.panel1.TabIndex = 0;
+            this.panelMT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.panelMT.Controls.Add(this.labelLetterGrade);
+            this.panelMT.Controls.Add(this.labelGradeRemarks);
+            this.panelMT.Controls.Add(this.label21);
+            this.panelMT.Controls.Add(this.labelResultMTGrade);
+            this.panelMT.Controls.Add(this.label19);
+            this.panelMT.Controls.Add(this.textBoxLAAverage);
+            this.panelMT.Controls.Add(this.textBoxLA4);
+            this.panelMT.Controls.Add(this.textBoxLA3);
+            this.panelMT.Controls.Add(this.textBoxLA2);
+            this.panelMT.Controls.Add(this.textBoxLA1);
+            this.panelMT.Controls.Add(this.textBoxExamAverage);
+            this.panelMT.Controls.Add(this.textBoxExam);
+            this.panelMT.Controls.Add(this.textBoxASAverage);
+            this.panelMT.Controls.Add(this.textBoxAS2);
+            this.panelMT.Controls.Add(this.textBoxAS1);
+            this.panelMT.Controls.Add(this.textBoxQuizAve);
+            this.panelMT.Controls.Add(this.textBoxQuiz2);
+            this.panelMT.Controls.Add(this.textBoxQuiz1);
+            this.panelMT.Controls.Add(this.buttonComputeGrade);
+            this.panelMT.Controls.Add(this.label18);
+            this.panelMT.Controls.Add(this.label17);
+            this.panelMT.Controls.Add(this.label16);
+            this.panelMT.Controls.Add(this.label15);
+            this.panelMT.Controls.Add(this.label14);
+            this.panelMT.Controls.Add(this.label13);
+            this.panelMT.Controls.Add(this.label12);
+            this.panelMT.Controls.Add(this.label11);
+            this.panelMT.Controls.Add(this.label10);
+            this.panelMT.Controls.Add(this.label9);
+            this.panelMT.Controls.Add(this.label8);
+            this.panelMT.Controls.Add(this.label7);
+            this.panelMT.Controls.Add(this.label6);
+            this.panelMT.Controls.Add(this.label5);
+            this.panelMT.Controls.Add(this.label4);
+            this.panelMT.Controls.Add(this.label3);
+            this.panelMT.Controls.Add(this.label2);
+            this.panelMT.Controls.Add(this.label1);
+            this.panelMT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMT.ForeColor = System.Drawing.Color.White;
+            this.panelMT.Location = new System.Drawing.Point(0, 0);
+            this.panelMT.Name = "panelMT";
+            this.panelMT.Size = new System.Drawing.Size(555, 437);
+            this.panelMT.TabIndex = 0;
             // 
             // labelLetterGrade
             // 
@@ -426,20 +429,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 398);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(555, 437);
+            this.Controls.Add(this.panelMT);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMidtermCalculator";
             this.Text = "FormMidtermCalculator";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelMT.ResumeLayout(false);
+            this.panelMT.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel panelMT;
         private Label label1;
         private Label label18;
         private Label label17;

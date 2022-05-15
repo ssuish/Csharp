@@ -39,13 +39,13 @@
             this.totalGWAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.foregroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonBacktoLogin = new System.Windows.Forms.Button();
             this.buttonShowSelectedCalculator = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxCalc = new System.Windows.Forms.GroupBox();
             this.radioButtonTotalGWA = new System.Windows.Forms.RadioButton();
             this.radioButtonSemestral = new System.Windows.Forms.RadioButton();
             this.radioButtonFinals = new System.Windows.Forms.RadioButton();
@@ -55,8 +55,8 @@
             this.buttonToLoginPage = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panelMain.SuspendLayout();
+            this.groupBoxCalc.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -137,24 +137,10 @@
             // 
             // changeColorToolStripMenuItem
             // 
-            this.changeColorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.foregroundToolStripMenuItem,
-            this.backgroundToolStripMenuItem});
             this.changeColorToolStripMenuItem.Name = "changeColorToolStripMenuItem";
-            this.changeColorToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.changeColorToolStripMenuItem.Text = "Change Color";
-            // 
-            // foregroundToolStripMenuItem
-            // 
-            this.foregroundToolStripMenuItem.Name = "foregroundToolStripMenuItem";
-            this.foregroundToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.foregroundToolStripMenuItem.Text = "Foreground";
-            // 
-            // backgroundToolStripMenuItem
-            // 
-            this.backgroundToolStripMenuItem.Name = "backgroundToolStripMenuItem";
-            this.backgroundToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.backgroundToolStripMenuItem.Text = "Background";
+            this.changeColorToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changeColorToolStripMenuItem.Text = "Change Forecolor";
+            this.changeColorToolStripMenuItem.Click += new System.EventHandler(this.changeColorToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -167,25 +153,51 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
-            // panel1
+            // panelMain
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.buttonShowSelectedCalculator);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.buttonToLoginPage);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 437);
-            this.panel1.TabIndex = 1;
+            this.panelMain.BackColor = System.Drawing.Color.Transparent;
+            this.panelMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMain.BackgroundImage")));
+            this.panelMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMain.Controls.Add(this.label4);
+            this.panelMain.Controls.Add(this.buttonBacktoLogin);
+            this.panelMain.Controls.Add(this.buttonShowSelectedCalculator);
+            this.panelMain.Controls.Add(this.groupBoxCalc);
+            this.panelMain.Controls.Add(this.label1);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMain.Location = new System.Drawing.Point(0, 24);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(229, 437);
+            this.panelMain.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 54);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Prepared by:";
+            // 
+            // buttonBacktoLogin
+            // 
+            this.buttonBacktoLogin.FlatAppearance.BorderSize = 0;
+            this.buttonBacktoLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBacktoLogin.Image = ((System.Drawing.Image)(resources.GetObject("buttonBacktoLogin.Image")));
+            this.buttonBacktoLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBacktoLogin.Location = new System.Drawing.Point(12, 379);
+            this.buttonBacktoLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonBacktoLogin.Name = "buttonBacktoLogin";
+            this.buttonBacktoLogin.Size = new System.Drawing.Size(136, 41);
+            this.buttonBacktoLogin.TabIndex = 7;
+            this.buttonBacktoLogin.Text = " Back to Login";
+            this.buttonBacktoLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBacktoLogin.UseVisualStyleBackColor = true;
+            this.buttonBacktoLogin.Click += new System.EventHandler(this.buttonBacktoLogin_Click);
             // 
             // buttonShowSelectedCalculator
             // 
@@ -193,7 +205,7 @@
             this.buttonShowSelectedCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonShowSelectedCalculator.Image = ((System.Drawing.Image)(resources.GetObject("buttonShowSelectedCalculator.Image")));
             this.buttonShowSelectedCalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonShowSelectedCalculator.Location = new System.Drawing.Point(14, 313);
+            this.buttonShowSelectedCalculator.Location = new System.Drawing.Point(12, 330);
             this.buttonShowSelectedCalculator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonShowSelectedCalculator.Name = "buttonShowSelectedCalculator";
             this.buttonShowSelectedCalculator.Size = new System.Drawing.Size(89, 41);
@@ -203,22 +215,22 @@
             this.buttonShowSelectedCalculator.UseVisualStyleBackColor = true;
             this.buttonShowSelectedCalculator.Click += new System.EventHandler(this.buttonShowSelectedCalculator_Click);
             // 
-            // groupBox1
+            // groupBoxCalc
             // 
-            this.groupBox1.Controls.Add(this.radioButtonTotalGWA);
-            this.groupBox1.Controls.Add(this.radioButtonSemestral);
-            this.groupBox1.Controls.Add(this.radioButtonFinals);
-            this.groupBox1.Controls.Add(this.radioButtonMidterm);
-            this.groupBox1.Controls.Add(this.radioButtonPrelim);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(14, 130);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(201, 175);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Choose a calculator";
+            this.groupBoxCalc.Controls.Add(this.radioButtonTotalGWA);
+            this.groupBoxCalc.Controls.Add(this.radioButtonSemestral);
+            this.groupBoxCalc.Controls.Add(this.radioButtonFinals);
+            this.groupBoxCalc.Controls.Add(this.radioButtonMidterm);
+            this.groupBoxCalc.Controls.Add(this.radioButtonPrelim);
+            this.groupBoxCalc.ForeColor = System.Drawing.Color.White;
+            this.groupBoxCalc.Location = new System.Drawing.Point(12, 147);
+            this.groupBoxCalc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBoxCalc.Name = "groupBoxCalc";
+            this.groupBoxCalc.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBoxCalc.Size = new System.Drawing.Size(201, 175);
+            this.groupBoxCalc.TabIndex = 3;
+            this.groupBoxCalc.TabStop = false;
+            this.groupBoxCalc.Text = "Choose a calculator";
             // 
             // radioButtonTotalGWA
             // 
@@ -321,7 +333,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
@@ -332,10 +344,10 @@
             this.Text = "Form3";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
+            this.groupBoxCalc.ResumeLayout(false);
+            this.groupBoxCalc.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,14 +357,12 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
-        private Panel panel1;
+        private Panel panelMain;
         private ToolStripMenuItem prelimCalculatorToolStripMenuItem;
         private ToolStripMenuItem prelimToolStripMenuItem;
         private ToolStripMenuItem midtermToolStripMenuItem;
         private ToolStripMenuItem finalsToolStripMenuItem;
         private ToolStripMenuItem semestralToolStripMenuItem;
-        private ToolStripMenuItem editToolStripMenuItem;
-        private ToolStripMenuItem viewToolStripMenuItem;
         private Label label1;
         private Button buttonToLoginPage;
         private GroupBox groupBox1;
@@ -362,11 +372,13 @@
         private RadioButton radioButtonMidterm;
         private RadioButton radioButtonPrelim;
         private Button buttonShowSelectedCalculator;
-        private ToolStripMenuItem changeColorToolStripMenuItem;
-        private ToolStripMenuItem foregroundToolStripMenuItem;
-        private ToolStripMenuItem backgroundToolStripMenuItem;
-        private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem totalGWAToolStripMenuItem;
-        private Button button1;
+        private Button buttonBacktoLogin;
+        private Label label4;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private ToolStripMenuItem changeColorToolStripMenuItem;
+        private ToolStripMenuItem viewToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private GroupBox groupBoxCalc;
     }
 }
