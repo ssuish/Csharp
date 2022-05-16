@@ -26,6 +26,26 @@ namespace Grade_Calculator
             login.Show();
         }
 
+        private bool checkFieldsIfEmpty()
+        { 
+            if (textBoxLogUsername.Text is null || textBoxLogUsername.Text.Length == 0)
+            {
+                if (textBoxEmail.Text is null || textBoxEmail.Text.Length == 0)
+                {
+                    if (textBoxLogPwrd.Text is null || textBoxLogPwrd.Text.Length == 0)
+                    {
+                        return true;
+                    }
+
+                    return true;
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
         private void buttonSignup_Click(object sender, EventArgs e)
         {
             try
@@ -35,28 +55,37 @@ namespace Grade_Calculator
                 string cap = string.Empty;
                 string msg = string.Empty;
 
-                if (textBoxLogPwrd.Text == textBoxRepeatPwrd.Text)
+                if (!checkFieldsIfEmpty())
                 {
-                    string userInfo = textBoxLogUsername.Text + "," + textBoxLogPwrd.Text;
-                    string loginToken = aes.Encrypt(userInfo);
+                    if (textBoxLogPwrd.Text == textBoxRepeatPwrd.Text)
+                    {
+                        string userInfo = textBoxLogUsername.Text + "," + textBoxLogPwrd.Text;
+                        string loginToken = aes.Encrypt(userInfo);
 
-                    string runTimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                    string dataDirectory = Path.Combine(runTimeDirectory, "Data");
-                    if (!Directory.Exists(dataDirectory))
-                        Directory.CreateDirectory(dataDirectory);
+                        string runTimeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                        string dataDirectory = Path.Combine(runTimeDirectory, "Data");
+                        if (!Directory.Exists(dataDirectory))
+                            Directory.CreateDirectory(dataDirectory);
 
-                    TextWriter writerToken = new StreamWriter(Path.Combine(dataDirectory, "userData.txt"));
-                    writerToken.WriteLine(loginToken);
-                    writerToken.Close();
+                        TextWriter writerToken = new StreamWriter(Path.Combine(dataDirectory, "userData.txt"));
+                        writerToken.WriteLine(loginToken);
+                        writerToken.Close();
 
-                    cap = "Sign up successful";
-                    msg = "You have created new account! Please proceed to login.";
-                    MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cap = "Sign up successful";
+                        msg = "You have created new account! Please proceed to login.";
+                        MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        cap = "Invalid Information";
+                        msg = "Passwords aren't matched. Please try again.";
+                        MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
                 else
                 {
-                    cap = "Invalid Information";
-                    msg = "Passwords aren't matched. Please try again.";
+                    cap = "Empty Information";
+                    msg = "Please supply are required information!";
                     MessageBox.Show(msg, cap, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
