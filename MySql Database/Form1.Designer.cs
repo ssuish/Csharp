@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,10 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridViewParking = new System.Windows.Forms.DataGridView();
-            this.licenseCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brandCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeinCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeoutCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.durationCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paidCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pARKINGDBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.parkingdbDataSet = new WindowsFormsApp1.parkingdbDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxLP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,16 +53,26 @@ namespace WindowsFormsApp1
             this.buttonSaveDataDB = new System.Windows.Forms.Button();
             this.buttonUpdateData = new System.Windows.Forms.Button();
             this.buttonVehiclePaid = new System.Windows.Forms.Button();
-            this.buttonLoadDataDB = new System.Windows.Forms.Button();
-            this.buttonClearDataDB = new System.Windows.Forms.Button();
+            this.pARKINGDBTableAdapter = new WindowsFormsApp1.parkingdbDataSetTableAdapters.PARKINGDBTableAdapter();
+            this.buttonLogs = new System.Windows.Forms.Button();
+            this.licensePlateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brandCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeinCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeoutCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durationCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paidCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParking)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pARKINGDBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingdbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewParking
             // 
             this.dataGridViewParking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewParking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.licenseCol,
+            this.licensePlateCol,
             this.brandCol,
             this.colorCol,
             this.timeinCol,
@@ -81,59 +86,15 @@ namespace WindowsFormsApp1
             this.dataGridViewParking.TabIndex = 0;
             this.dataGridViewParking.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewParking_CellContentClick);
             // 
-            // licenseCol
+            // pARKINGDBBindingSource
             // 
-            this.licenseCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.licenseCol.HeaderText = "LICENSE PLATE";
-            this.licenseCol.Name = "licenseCol";
-            this.licenseCol.Width = 105;
+            this.pARKINGDBBindingSource.DataMember = "PARKINGDB";
+            this.pARKINGDBBindingSource.DataSource = this.parkingdbDataSet;
             // 
-            // brandCol
+            // parkingdbDataSet
             // 
-            this.brandCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.brandCol.HeaderText = "BRAND";
-            this.brandCol.Name = "brandCol";
-            this.brandCol.Width = 70;
-            // 
-            // colorCol
-            // 
-            this.colorCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colorCol.HeaderText = "COLOR";
-            this.colorCol.Name = "colorCol";
-            this.colorCol.Width = 69;
-            // 
-            // timeinCol
-            // 
-            this.timeinCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.timeinCol.HeaderText = "TIME IN";
-            this.timeinCol.Name = "timeinCol";
-            this.timeinCol.Width = 67;
-            // 
-            // timeoutCol
-            // 
-            this.timeoutCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.timeoutCol.HeaderText = "TIME OUT";
-            this.timeoutCol.Name = "timeoutCol";
-            this.timeoutCol.Width = 78;
-            // 
-            // durationCol
-            // 
-            this.durationCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.durationCol.HeaderText = "DURATION";
-            this.durationCol.Name = "durationCol";
-            this.durationCol.Width = 89;
-            // 
-            // amountCol
-            // 
-            this.amountCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.amountCol.HeaderText = "AMOUNT";
-            this.amountCol.Name = "amountCol";
-            // 
-            // paidCol
-            // 
-            this.paidCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.paidCol.HeaderText = "PAID";
-            this.paidCol.Name = "paidCol";
+            this.parkingdbDataSet.DataSetName = "parkingdbDataSet";
+            this.parkingdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -261,11 +222,11 @@ namespace WindowsFormsApp1
             // 
             // buttonDeleteData
             // 
-            this.buttonDeleteData.Location = new System.Drawing.Point(365, 165);
+            this.buttonDeleteData.Location = new System.Drawing.Point(527, 150);
             this.buttonDeleteData.Name = "buttonDeleteData";
-            this.buttonDeleteData.Size = new System.Drawing.Size(75, 23);
+            this.buttonDeleteData.Size = new System.Drawing.Size(75, 38);
             this.buttonDeleteData.TabIndex = 18;
-            this.buttonDeleteData.Text = "Delete Row";
+            this.buttonDeleteData.Text = "DELETE ROW";
             this.buttonDeleteData.UseVisualStyleBackColor = true;
             this.buttonDeleteData.Click += new System.EventHandler(this.buttonDeleteData_Click);
             // 
@@ -281,9 +242,9 @@ namespace WindowsFormsApp1
             // 
             // buttonSaveDataDB
             // 
-            this.buttonSaveDataDB.Location = new System.Drawing.Point(511, 165);
+            this.buttonSaveDataDB.Location = new System.Drawing.Point(446, 150);
             this.buttonSaveDataDB.Name = "buttonSaveDataDB";
-            this.buttonSaveDataDB.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveDataDB.Size = new System.Drawing.Size(75, 38);
             this.buttonSaveDataDB.TabIndex = 20;
             this.buttonSaveDataDB.Text = "SAVE";
             this.buttonSaveDataDB.UseVisualStyleBackColor = true;
@@ -291,11 +252,11 @@ namespace WindowsFormsApp1
             // 
             // buttonUpdateData
             // 
-            this.buttonUpdateData.Location = new System.Drawing.Point(284, 165);
+            this.buttonUpdateData.Location = new System.Drawing.Point(608, 150);
             this.buttonUpdateData.Name = "buttonUpdateData";
-            this.buttonUpdateData.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdateData.Size = new System.Drawing.Size(75, 38);
             this.buttonUpdateData.TabIndex = 21;
-            this.buttonUpdateData.Text = "Update Row";
+            this.buttonUpdateData.Text = "UPDATE ROW";
             this.buttonUpdateData.UseVisualStyleBackColor = true;
             this.buttonUpdateData.Click += new System.EventHandler(this.buttonUpdateData_Click);
             // 
@@ -309,31 +270,70 @@ namespace WindowsFormsApp1
             this.buttonVehiclePaid.UseVisualStyleBackColor = true;
             this.buttonVehiclePaid.Click += new System.EventHandler(this.buttonVehiclePaid_Click);
             // 
-            // buttonLoadDataDB
+            // pARKINGDBTableAdapter
             // 
-            this.buttonLoadDataDB.Location = new System.Drawing.Point(592, 165);
-            this.buttonLoadDataDB.Name = "buttonLoadDataDB";
-            this.buttonLoadDataDB.Size = new System.Drawing.Size(75, 23);
-            this.buttonLoadDataDB.TabIndex = 23;
-            this.buttonLoadDataDB.Text = "LOAD";
-            this.buttonLoadDataDB.UseVisualStyleBackColor = true;
+            this.pARKINGDBTableAdapter.ClearBeforeFill = true;
             // 
-            // buttonClearDataDB
+            // buttonLogs
             // 
-            this.buttonClearDataDB.Location = new System.Drawing.Point(673, 165);
-            this.buttonClearDataDB.Name = "buttonClearDataDB";
-            this.buttonClearDataDB.Size = new System.Drawing.Size(75, 23);
-            this.buttonClearDataDB.TabIndex = 24;
-            this.buttonClearDataDB.Text = "CLEAR DB";
-            this.buttonClearDataDB.UseVisualStyleBackColor = true;
+            this.buttonLogs.Location = new System.Drawing.Point(689, 150);
+            this.buttonLogs.Name = "buttonLogs";
+            this.buttonLogs.Size = new System.Drawing.Size(75, 38);
+            this.buttonLogs.TabIndex = 23;
+            this.buttonLogs.Text = "LOGS";
+            this.buttonLogs.UseVisualStyleBackColor = true;
+            this.buttonLogs.Click += new System.EventHandler(this.buttonLogs_Click);
             // 
-            // Form1
+            // licensePlateCol
+            // 
+            this.licensePlateCol.HeaderText = "LICENSE PLATE";
+            this.licensePlateCol.Name = "licensePlateCol";
+            // 
+            // brandCol
+            // 
+            this.brandCol.HeaderText = "BRAND";
+            this.brandCol.Name = "brandCol";
+            // 
+            // colorCol
+            // 
+            this.colorCol.HeaderText = "COLOR";
+            this.colorCol.Name = "colorCol";
+            // 
+            // timeinCol
+            // 
+            this.timeinCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.timeinCol.HeaderText = "TIME IN";
+            this.timeinCol.Name = "timeinCol";
+            this.timeinCol.Width = 67;
+            // 
+            // timeoutCol
+            // 
+            this.timeoutCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.timeoutCol.HeaderText = "TIME OUT";
+            this.timeoutCol.Name = "timeoutCol";
+            this.timeoutCol.Width = 78;
+            // 
+            // durationCol
+            // 
+            this.durationCol.HeaderText = "DURATION";
+            this.durationCol.Name = "durationCol";
+            // 
+            // amountCol
+            // 
+            this.amountCol.HeaderText = "AMOUNT";
+            this.amountCol.Name = "amountCol";
+            // 
+            // paidCol
+            // 
+            this.paidCol.HeaderText = "PAID";
+            this.paidCol.Name = "paidCol";
+            // 
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonClearDataDB);
-            this.Controls.Add(this.buttonLoadDataDB);
+            this.Controls.Add(this.buttonLogs);
             this.Controls.Add(this.buttonVehiclePaid);
             this.Controls.Add(this.buttonUpdateData);
             this.Controls.Add(this.buttonSaveDataDB);
@@ -355,9 +355,12 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.textBoxLP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewParking);
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.Text = "Update";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParking)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pARKINGDBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingdbDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,7 +389,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button buttonSaveDataDB;
         private System.Windows.Forms.Button buttonUpdateData;
         private System.Windows.Forms.Button buttonVehiclePaid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn licenseCol;
+        private parkingdbDataSet parkingdbDataSet;
+        private System.Windows.Forms.BindingSource pARKINGDBBindingSource;
+        private parkingdbDataSetTableAdapters.PARKINGDBTableAdapter pARKINGDBTableAdapter;
+        private System.Windows.Forms.Button buttonLogs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn licensePlateCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn brandCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn colorCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeinCol;
@@ -394,8 +401,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn durationCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn paidCol;
-        private System.Windows.Forms.Button buttonLoadDataDB;
-        private System.Windows.Forms.Button buttonClearDataDB;
     }
 }
 

@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -40,6 +34,22 @@ namespace WindowsFormsApp1
             dataGridViewParking.Rows[n].Cells[6].Value = "NA";
             dataGridViewParking.Rows[n].Cells[7].Value = "FALSE";
 
+            // send data from text to database
+            //string cs = @"Data Source=.\sqlexpress;Initial Catalog=parkingdb;Integrated Security=True";
+            //SqlConnection con = new SqlConnection(cs);
+            //con.Open();
+
+            //string licensePlate = textBoxLP.Text;
+            //string brand = textBoxBrand.Text;
+            //string color = textBoxColor.Text;
+            //string paid = "FALSE";
+
+            //string query = @"INSERT INTO PARKINGDB VALUES('"+licensePlate+ "','" + brand + "','" + color + "')";
+            //SqlCommand cmd = new SqlCommand(query, con);
+            //cmd.ExecuteNonQuery();
+            //con.Close();
+            //MessageBox.Show("New customer unpaid added!");
+
             // can be a function. clears text in textbox.
             textBoxLP.Clear();
             textBoxColor.Clear();
@@ -48,8 +58,10 @@ namespace WindowsFormsApp1
             textBoxAmount.Clear();
 
             // mark it yellow as pending
-            for (int i = 0; i <= 7; i++)
-                dataGridViewParking.Rows[n].Cells[i].Style.BackColor = Color.Yellow;
+            for (int j = 0; j <= 7; j++)
+            {
+                dataGridViewParking.Rows[dataGridViewParking.CurrentRow.Index].Cells[j].Style.BackColor = Color.Yellow;
+            }
         }
 
         private void buttonTimeOUT_Click(object sender, EventArgs e)
@@ -60,13 +72,20 @@ namespace WindowsFormsApp1
             available += 1;
             occupied -= 1;
 
-            int duration = int.Parse((timeout - timein).TotalMinutes.ToString());
+            float duration = float.Parse((timeout - timein).TotalMinutes.ToString());
             var span = TimeSpan.FromMinutes(duration);
             var hour = ((int)span.TotalHours).ToString();
             var Minute = span.Minutes.ToString();
 
+
+            /// Computes for the cost based on the parking duration of the vehicle
+            ///     Follows the pricing:
+            ///     free - less than 15 minutes
+            ///     50php - first 3 hours
+            ///     20php - per succeduing hour (after the 3 hours)
+
             textBoxDuration.Text = $"{hour}hr {Minute}min";
-            double numHours = duration / 60;
+            float numHours = duration / 60;
             int price;
 
             if (numHours >= 0)
@@ -92,6 +111,7 @@ namespace WindowsFormsApp1
 
             numVehicles += 1;
 
+            // to change
             dataGridViewParking.Rows[dataGridViewParking.CurrentRow.Index].Cells["timeoutCol"].Value = timeTB_TimeOUT.Text;
             dataGridViewParking.Rows[dataGridViewParking.CurrentRow.Index].Cells["durationCol"].Value = textBoxDuration.Text;
             dataGridViewParking.Rows[dataGridViewParking.CurrentRow.Index].Cells["amountCol"].Value = textBoxAmount.Text;
@@ -171,16 +191,41 @@ namespace WindowsFormsApp1
                 var amount = dataGridViewParking.Rows[i].Cells[6].Value;
                 var paid = dataGridViewParking.Rows[i].Cells[7].Value;
 
-                SqlCommand cmd = new SqlCommand(@"INSERT INTO PARKINGDB
-                (licensePlate, brand, color, timeIN, timeOUT, duration, amount, paid)
-                VALUES ('"+licensePlate+ "','" + brand + "','" + color + "','" + timein + "','" + timeout + "','" + duration + "', '" + amount + "', '" + paid + "')", con);
+                string query = @"INSERT INTO PARKINGDB
+                (LICENSE_PLATE, brand, color, TIME_IN, TIME_OUT, duration, amount, paid)
+                VALUES
+                ('" + licensePlate + "','" + brand + "','" + color + "','" + timein + "','" + timeout + "','" + duration + "', '" + amount + "', '" + paid + "')";
+                SqlCommand cmd = new SqlCommand(query, con);
 
                 con.Open();
                 cmd.ExecuteNonQuery();
-                
+
             }
 
             MessageBox.Show("All data saved on database!");
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void buttonLogs_Click(object sender, EventArgs e)
+        {
+            LogForm logs = new LogForm();
+            logs.ShowDialog();
+        }
+
+        //private void buttonLoadDataDB_Click(object sender, EventArgs e)
+        //{
+        //    databound to datagrid
+        //    string selectDB = "SELECT * FROM PARKINGDB";
+        //    string con = @"Data Source=.\sqlexpress;Initial Catalog=parkingdb;Integrated Security=True";
+        //    SqlDataAdapter da = new SqlDataAdapter(selectDB, con);
+        //    DataSet ds = new DataSet();
+        //    da.Fill(ds, "PARKINGDB");
+        //    dataGridViewParking.DataSource = ds.Tables["PARKINGDB"].DefaultView;
+        //}
     }
 }
