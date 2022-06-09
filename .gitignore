@@ -398,3 +398,8 @@ FodyWeavers.xsd
 *.sln.iml
 MySql Database/.vscode/launch.json
 MySql Database/.vscode/tasks.json
+
+# addional files to ignore
+*.vscode/
+*.csproj
+*.csproj.user
