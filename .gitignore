@@ -398,3 +398,7 @@ FodyWeavers.xsd
 *.sln.iml
 MySql Database/.vscode/launch.json
 MySql Database/.vscode/tasks.json
+
+# Addtional files for Visual Studio Code
+.vscode/
+*.csproj
