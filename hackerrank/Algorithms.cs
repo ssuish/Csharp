@@ -24,5 +24,33 @@ namespace hackerrank
 
             return 0;
         }
+
+        public static List<int> compareTriplets(List<int> a, List<int> b)
+        {
+            var scores = new List<int>();
+            int alice = 0;
+            int bob = 0;
+
+            if (1 <= a.Count() && a.Count() <= 100)
+                if (1 <= b.Count() && a.Count() <= 100)
+                {
+                    for (int i = 0; i < a.Count; i++)
+                    {
+                        if (a[i] > b[i])
+                        {
+                            alice++;
+                        }
+                        else if (b[i] > a[i])
+                        {
+                            bob++;
+                        }
+                    }
+
+                    scores.Add(alice);
+                    scores.Add(bob);
+                }
+                
+            return scores;
+        }
     }
 }
