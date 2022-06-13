@@ -95,11 +95,11 @@ namespace hackerrank
         {
             var xdiag = new List<int>();
             var ydiag = new List<int>();
-            int j = 2;
+            int j = arr.Count - 1;
             int xtotal = 0;
             int ytotal = 0;
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < arr.Count; i++)
             {
                 xdiag.Add(arr[i][i]);
                 ydiag.Add(arr[i][j]);
