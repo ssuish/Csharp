@@ -109,10 +109,19 @@ namespace hackerrank
             foreach (int sum in xdiag)
                 xtotal += sum;
             foreach (int sum in ydiag)
-                ytotal += sum;  
+                ytotal += sum;
 
             return Math.Abs(xtotal - ytotal);
         }
 
+        /*
+            Given an array of integers, calculate the ratios of its elements 
+            that are positive, negative, and zero. Print the decimal value 
+            of each fraction on a new line with 6 places after the decimal.
+        */
+        public static void plusMinus(List<int> arr)
+        {
+
+        }
     }
 }
