@@ -47,5 +47,9 @@ public class Week1
             sum += i;
         }
         return (sum - high - low) / (salary.Length - 2);
+
+        /*
+        
+        */
     }
 }
