@@ -13,9 +13,12 @@ var arr = new List<List<int>>() {
 int result = warmUp.diagonalDifference(arr);
 Console.WriteLine(result);
 */
-
+/*
 var arr = new List<int>() {
     -4, 3, -9, 0, 4, 1
 };
 
 warmUp.plusMinus(arr);
+*/
+
+warmUp.staircase(6);
