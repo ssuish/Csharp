@@ -1,6 +1,6 @@
 namespace leetcode;
 
-public class Week1 
+public class Week1
 {
     /*
         Day 1 - Basic Data Type
@@ -29,7 +29,8 @@ public class Week1
         and maximum salary. Answers within 10-5 of the actual answer 
         will be accepted.
     */
-    public double Average(int[] salary) {
+    public double Average(int[] salary)
+    {
         int low = salary[0];
         int high = salary[0];
         int sum = 0;
@@ -47,9 +48,17 @@ public class Week1
             sum += i;
         }
         return (sum - high - low) / (salary.Length - 2);
+    }
 
-        /*
+    /*
+        Write a function that takes an unsigned 
+        integer and returns the number of '1' bits 
+        it has (also known as the Hamming weight).
+    */
+    public int HammingWeight(uint n)
+    {
         
-        */
+
+        return 0;
     }
 }
