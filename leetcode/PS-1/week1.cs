@@ -57,8 +57,19 @@ public class Week1
     */
     public int HammingWeight(uint n)
     {
-        
 
+
+        return 0;
+    }
+
+    /*
+        Given an integer number n, return the difference between 
+        the product of its digits and the sum of its digits.
+    */
+    public int SubtractProductAndSum(int n)
+    {
+        
+        
         return 0;
     }
 }
