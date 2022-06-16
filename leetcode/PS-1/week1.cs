@@ -57,9 +57,14 @@ public class Week1
     */
     public int HammingWeight(uint n)
     {
-
-
-        return 0;
+        Int32 weight = 0;
+        string bin = n.ToString();
+        foreach (char i in bin)
+        {
+            if (i == '1')
+                weight++;
+        }
+        return weight;
     }
 
     /*
