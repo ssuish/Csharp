@@ -19,4 +19,4 @@ var person2 = new Person("DEF");
 Console.WriteLine(person2.Name);
 
 var person3 = new Person("GHI", 30);
-Console.WriteLine(person3.Name, person3.Age);
+Console.WriteLine($"{person3.Name} is {person3.Age} years old");
