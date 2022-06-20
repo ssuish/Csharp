@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 // ===========================================================
-// OOP Basics: Classes and Objects
+// Object Oriented Programming with C# 
 /*
     Links for reference: 
     - https://zetcode.com/lang/csharp/oopi/
