@@ -118,7 +118,8 @@ public class Week1
         The Manhattan distance between two points (x1, y1) and (x2, y2) is 
         abs(x1 - x2) + abs(y1 - y2).
     */
-    public int NearestValidPoint(int x, int y, int[][] points) {
+    public int NearestValidPoint(int x, int y, int[][] points)
+    {
         return 0;
     }
 }
