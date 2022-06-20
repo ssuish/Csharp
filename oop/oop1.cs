@@ -39,4 +39,30 @@ class Person
         this.Name = name;
         this.Age = age;
     }
-}   
+
+    // Overriding toString()
+    public override string ToString()
+    {
+        return $"{Name} is {Age} years old.";
+    }
+
+    // Object initializer
+    public Person()
+    {
+        // Empty constructor
+    }
+}
+
+class Job
+{
+    // Object Attributes
+    private string _name;
+    private int _salary;
+
+    // Expression-bodied constructor
+    public Job(string name, int salary) => 
+        (this._name, this._salary) = (name, salary);
+
+    public override string ToString() =>
+        $"{this._name} earns {this._salary} dollars per month.";
+}
