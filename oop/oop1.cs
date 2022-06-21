@@ -66,3 +66,31 @@ class Job
     public override string ToString() =>
         $"{this._name} earns {this._salary} dollars per month.";
 }
+
+// Target Typed new expression
+class User
+{
+    public string FirstName
+    {
+        get;
+        set;
+    }
+
+    public string LastName
+    {
+        get;
+        set;
+    }
+
+    public string Occupation
+    {
+        get;
+        set;
+    }
+
+    public User(string firstName, string lastName, string occupation) => 
+        (this.FirstName, this.LastName, this.Occupation) = (firstName, lastName, occupation);
+
+    public override string ToString() =>
+        $"{this.FirstName} {this.LastName} is a {this.Occupation}.";
+}

@@ -11,6 +11,8 @@
 */
 // ===========================================================
 
+/*
+
 // Object Attributes and Instances
 var person = new Person("ABC");
 Console.WriteLine(person.Name);
@@ -39,9 +41,42 @@ var Job = new Job("Someone", 1200);
 Console.WriteLine(Job.ToString());
 // Expected: Someone is 1200 dollars
 
+*/
+
 // ===========================================================
 // New OOP Feature for C# 9.0
 // Target-Typed new expression
+/* 
+    The var keyword can be used to omit the type declaration on 
+    the left side of the assignment, since the compiler can infer 
+    the type from the right side.
+*/
+var u1 = new User("Roger", "Roe", "Driver");
+Console.WriteLine(u1);
 
+/*
+    The target-typed new expression allows us to omit the type 
+    declaration on the right side of the assignment.
+*/
+User u2 = new("John", "Doe", "Gardener");
+Console.WriteLine(u2);
+
+/*
+    In a list initializer, we save a few key strokes by omitting 
+    the type for each user.
+*/
+var users = new List<User>
+{
+    new("Thomas", "Roove", "programmer"),
+    new("Lucia", "Smith", "hair dresser"),
+    new("Peter", "Holcomb", "painter"),
+    new("Orlando", "Black", "actor"),
+    new("Patrick", "Allen", "police officer")
+};
+
+foreach (var u in users)
+{
+    Console.WriteLine(u);
+}
 
 // ===========================================================
