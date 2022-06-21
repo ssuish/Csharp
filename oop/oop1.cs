@@ -76,13 +76,13 @@ class User
         set;
     }
 
-    public string LastName
+    public string LastName // fields
     {
         get;
         set;
     }
 
-    public string Occupation
+    public string Occupation // fields
     {
         get;
         set;
