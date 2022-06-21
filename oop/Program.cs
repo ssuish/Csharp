@@ -38,3 +38,10 @@ Console.WriteLine($"{person4.Name} is {person4.Age} years old");
 var Job = new Job("Someone", 1200);
 Console.WriteLine(Job.ToString());
 // Expected: Someone is 1200 dollars
+
+// ===========================================================
+// New OOP Feature for C# 9.0
+// Target-Typed new expression
+
+
+// ===========================================================
