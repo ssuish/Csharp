@@ -88,9 +88,11 @@ class User
         set;
     }
 
+    // Target Typed constructor
     public User(string firstName, string lastName, string occupation) => 
         (this.FirstName, this.LastName, this.Occupation) = (firstName, lastName, occupation);
 
     public override string ToString() =>
         $"{this.FirstName} {this.LastName} is a {this.Occupation}.";
 }
+

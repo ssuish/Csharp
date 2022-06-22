@@ -74,6 +74,9 @@ var users = new List<User>
     new("Patrick", "Allen", "police officer")
 };
 
+/* 
+    Print all data in the list
+*/
 foreach (var u in users)
 {
     Console.WriteLine(u);
