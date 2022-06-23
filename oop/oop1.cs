@@ -1,7 +1,7 @@
 class Person
 {
     // Object Attributes
-    private string _name;
+    private string _name = "";
     private int _age;
 
     // Constructor
@@ -96,3 +96,42 @@ class User
         $"{this.FirstName} {this.LastName} is a {this.Occupation}.";
 }
 
+class MathConstant
+{
+    // Class constants
+    public const double PI = 3.14;
+}
+
+// Inheritance
+// Base Class
+class Human
+{
+    static int count = 0;
+
+    public Human()
+    {
+        count++;
+        Console.WriteLine("Human is created");
+    }
+
+    public void DoCount() =>
+        Console.WriteLine($"There are {count} human/s.");
+}
+
+// Derived Class 1
+class Madoka : Human
+{
+    public Madoka()
+    {
+        Console.WriteLine("Madoka is created");
+    }
+}
+
+// Derived Class 2
+class Toru : Human
+{
+    public Toru()
+    {
+        Console.WriteLine("Toru is created");
+    }
+}
