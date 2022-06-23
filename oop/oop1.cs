@@ -60,7 +60,7 @@ class Job
     private int _salary;
 
     // Expression-bodied constructor
-    public Job(string name, int salary) => 
+    public Job(string name, int salary) =>
         (this._name, this._salary) = (name, salary);
 
     public override string ToString() =>
@@ -89,7 +89,7 @@ class User
     }
 
     // Target Typed constructor
-    public User(string firstName, string lastName, string occupation) => 
+    public User(string firstName, string lastName, string occupation) =>
         (this.FirstName, this.LastName, this.Occupation) = (firstName, lastName, occupation);
 
     public override string ToString() =>
@@ -102,7 +102,7 @@ class MathConstant
     public const double PI = 3.14;
 }
 
-// Inheritance
+// Classs Inheritance I
 // Base Class
 class Human
 {
@@ -134,4 +134,62 @@ class Toru : Human
     {
         Console.WriteLine("Toru is created");
     }
+}
+
+// Class Inheritance II  
+class Shape
+{
+    protected int x;
+    protected int y;
+
+    public Shape()
+    {
+        Console.WriteLine("Shape is created");
+    }
+
+    public Shape(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+class Circle : Shape
+{
+    private int r;
+
+    public Circle(int r, int x, int y) : base(x, y)
+    {
+        this.r = r;
+    }
+
+    public override string ToString()
+    {
+        return String.Format("Circle, r:{0}, x:{1}, y:{2}", r, x, y);
+    }
+}
+
+// Abstract Classes and Method
+abstract class Drawing
+{
+    protected int x = 0;
+    protected int y = 0;
+    public abstract double Area();
+    public string GetCoordinates() =>
+        string.Format($"x:{this.x}, y:{this.y}");
+}
+
+// Derived Class
+class Square : Drawing
+{
+    private int r;
+    public Square(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+    public override double Area() =>
+        this.r * this.r * Math.PI;
+    public override string ToString() => 
+        string.Format($"Circle at x:{this.x}, y:{this.y}");
 }

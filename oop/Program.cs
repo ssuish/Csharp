@@ -80,7 +80,7 @@ foreach (var u in users)
 // ===========================================================
 */
 
-// Class Inheritance
+// Class Inheritance II
 var human = new Human();
 human.DoCount();
 var mdk = new Madoka();
@@ -99,3 +99,12 @@ toru.DoCount();
             There are 3 human/s.
 */
 
+// Class Inheritance II
+var circle = new Circle(6, 4, 5);
+Console.WriteLine(circle.ToString());
+
+/*  Expected Output
+    Circle, r:6, x:4, y:5
+*/
+
+// Abstract Classes and Method
