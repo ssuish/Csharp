@@ -79,7 +79,7 @@ foreach (var u in users)
 }
 // ===========================================================
 */
-
+/*
 // Class Inheritance II
 var human = new Human();
 human.DoCount();
@@ -97,7 +97,6 @@ toru.DoCount();
     Human is created
         Toru is created
             There are 3 human/s.
-*/
 
 // Class Inheritance II
 var circle = new Circle(6, 4, 5);
@@ -105,6 +104,29 @@ Console.WriteLine(circle.ToString());
 
 /*  Expected Output
     Circle, r:6, x:4, y:5
-*/
+
 
 // Abstract Classes and Method
+var c = new Square(12, 45);
+Console.WriteLine(c);
+Console.WriteLine($"Area of Square:{c.Area()}");
+Console.WriteLine(c.GetCoordinates());
+
+/* Expected Results:
+    Square at x:12, y:45
+    Area of Square:540
+    x:12, y:45
+*/
+
+// Partial Classes
+var worker = new Worker();
+// Calling partial classes
+Console.WriteLine(worker.DoWork());
+Console.WriteLine(worker.DoWork());
+Console.WriteLine(worker.DoPause());
+
+/* Expected Result
+    Doing work
+    Doing work
+    Pausing
+*/

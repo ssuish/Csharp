@@ -179,17 +179,34 @@ abstract class Drawing
         string.Format($"x:{this.x}, y:{this.y}");
 }
 
-// Derived Class
+// Derived Class from Abstract Class
 class Square : Drawing
 {
-    private int r;
     public Square(int x, int y)
     {
         this.x = x;
         this.y = y;
     }
     public override double Area() =>
-        this.r * this.r * Math.PI;
-    public override string ToString() => 
-        string.Format($"Circle at x:{this.x}, y:{this.y}");
+        this.x * this.y;
+    public override string ToString() =>
+        string.Format($"Square at x:{this.x}, y:{this.y}");
+}
+
+// Partial Classes
+// Partial Class I
+partial class Worker
+{
+    public string DoWork()
+    {
+        return "Doing work";
+    }
+}
+// Partial Class II
+partial class Worker
+{
+    public string DoPause()
+    {
+        return "Pausing";
+    }
 }
