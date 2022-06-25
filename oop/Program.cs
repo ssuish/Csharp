@@ -1,4 +1,5 @@
-﻿// ===========================================================
+﻿
+// ===========================================================
 // Object Oriented Programming with C# 
 /*
     Links for reference: 
@@ -10,7 +11,6 @@
     - https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes-and-structs
 */
 // ===========================================================
-/*
 // Object Attributes and Instances
 var person = new Person("ABC");
 Console.WriteLine(person.Name);
@@ -46,6 +46,7 @@ Console.WriteLine(Job.ToString());
     The var keyword can be used to omit the type declaration on 
     the left side of the assignment, since the compiler can infer 
     the type from the right side.
+*/
 
 var u1 = new User("Roger", "Roe", "Driver");
 Console.WriteLine(u1);
@@ -53,6 +54,7 @@ Console.WriteLine(u1);
 /*
     The target-typed new expression allows us to omit the type 
     declaration on the right side of the assignment.
+*/
 
 User u2 = new("John", "Doe", "Gardener");
 Console.WriteLine(u2);
@@ -60,6 +62,7 @@ Console.WriteLine(u2);
 /*
     In a list initializer, we save a few key strokes by omitting 
     the type for each user.
+*/
 
 var users = new List<User>
 {
@@ -70,16 +73,14 @@ var users = new List<User>
     new("Patrick", "Allen", "police officer")
 };
 
-/* 
-    Print all data in the list
+// Print all data in the list
 
 foreach (var u in users)
 {
     Console.WriteLine(u);
 }
 // ===========================================================
-*/
-/*
+
 // Class Inheritance II
 var human = new Human();
 human.DoCount();
@@ -97,6 +98,7 @@ toru.DoCount();
     Human is created
         Toru is created
             There are 3 human/s.
+*/
 
 // Class Inheritance II
 var circle = new Circle(6, 4, 5);
@@ -104,7 +106,7 @@ Console.WriteLine(circle.ToString());
 
 /*  Expected Output
     Circle, r:6, x:4, y:5
-
+*/
 
 // Abstract Classes and Method
 var c = new Square(12, 45);
