@@ -39,15 +39,23 @@
 
 */
 
-// All programs here will be called and executed in class Program.
+// --- All programs here will be called and executed in class Program. ---
 class Module
 {
     public void Runner()
     {
-        // creating an object
-        var obj = new Being();
-        Console.WriteLine(b);
+        // creating new instance of the object from class Being.
+        // obj is the variable that handled the object.
+        var obj = new Being(); 
+        Console.WriteLine(obj);
     }
 }
 
-// All programs to be executed 
+// --- All Code goes here. ---
+
+// Created a simple class.
+class Being
+{
+    // Empty class and doesn't have any data or methods.
+}
+
