@@ -1,5 +1,3 @@
-
-
 class Person
 {
     // Object Attributes
