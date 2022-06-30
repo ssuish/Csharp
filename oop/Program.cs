@@ -11,6 +11,10 @@
     - https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes-and-structs
 */
 // ===========================================================
+
+// To debug or run the specific program, please write the instance here. 
+
+
 // Object Attributes and Instances
 var person = new Person("ABC");
 Console.WriteLine(person.Name);
