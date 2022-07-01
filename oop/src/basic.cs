@@ -39,15 +39,4 @@
 
 */
 
-// All programs here will be called and executed in class Program.
-class Module
-{
-    public void Runner()
-    {
-        // creating an object
-        var obj = new Being();
-        Console.WriteLine(b);
-    }
-}
-
-// All programs to be executed 
+// 
