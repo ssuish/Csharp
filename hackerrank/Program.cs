@@ -1,7 +1,6 @@
 ﻿using hackerrank;
 
-
-WarmUp_Algorithms warmUp = new();
+WarmUp warmUp = new();
 
 /*
 var arr = new List<List<int>>() {
