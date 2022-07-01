@@ -1,6 +1,6 @@
 namespace hackerrank
 {
-    public class WarmUp_Algorithms
+    public class WarmUp
     {
         static int SolveMeFirst(int a, int b)
         {
