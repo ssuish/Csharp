@@ -1,176 +1,221 @@
-namespace hackerrank
+namespace Hackerrank
 {
-    public class WarmUp
+    namespace Algorithms
     {
-        static int SolveMeFirst(int a, int b)
-        {
-            if (1 <= a && a <= 1000)
-                if (1 <= b && b <= 1000)
-                    return a + b;
 
-            return 0;
-        }
-
-        static int simpleArraySum(List<int> ar)
+        public class WarmUp
         {
-            if (0 < ar.Count() && ar.Count() <= 1000)
+            static int SolveMeFirst(int a, int b)
             {
-                int total = 0;
-                foreach (int sum in ar)
-                    total += sum;
+                if (1 <= a && a <= 1000)
+                    if (1 <= b && b <= 1000)
+                        return a + b;
 
-                return total;
+                return 0;
             }
 
-            return 0;
-        }
-
-        /*
-            The rating for Alice's challenge is the triplet a = (a[0], a[1], a[2]), 
-            and the rating for Bob's challenge is the triplet b = (b[0], b[1], b[2]).
-
-            The task is to find their comparison points by comparing 
-            a[0] with b[0], a[1] with b[1], and a[2] with b[2].
-            => If a[i] > b[i], then Alice is awarded 1 point.
-            => If a[i] < b[i], then Bob is awarded 1 point. 
-            => If a[i] = b[i], then neither person receives a point.
-
-            Comparison points is the total points a person earned.
-            Given a and b, determine their respective comparison points.
-        */
-        public static List<int> compareTriplets(List<int> a, List<int> b)
-        {
-            var scores = new List<int>();
-            int alice = 0;
-            int bob = 0;
-
-            if (1 <= a.Count() && a.Count() <= 100)
-                if (1 <= b.Count() && a.Count() <= 100)
+            static int simpleArraySum(List<int> ar)
+            {
+                if (0 < ar.Count() && ar.Count() <= 1000)
                 {
-                    for (int i = 0; i < a.Count; i++)
+                    int total = 0;
+                    foreach (int sum in ar)
+                        total += sum;
+
+                    return total;
+                }
+
+                return 0;
+            }
+
+            /*
+                The rating for Alice's challenge is the triplet a = (a[0], a[1], a[2]), 
+                and the rating for Bob's challenge is the triplet b = (b[0], b[1], b[2]).
+
+                The task is to find their comparison points by comparing 
+                a[0] with b[0], a[1] with b[1], and a[2] with b[2].
+                => If a[i] > b[i], then Alice is awarded 1 point.
+                => If a[i] < b[i], then Bob is awarded 1 point. 
+                => If a[i] = b[i], then neither person receives a point.
+
+                Comparison points is the total points a person earned.
+                Given a and b, determine their respective comparison points.
+            */
+            public static List<int> compareTriplets(List<int> a, List<int> b)
+            {
+                var scores = new List<int>();
+                int alice = 0;
+                int bob = 0;
+
+                if (1 <= a.Count() && a.Count() <= 100)
+                    if (1 <= b.Count() && a.Count() <= 100)
                     {
-                        if (a[i] > b[i])
+                        for (int i = 0; i < a.Count; i++)
                         {
-                            alice++;
+                            if (a[i] > b[i])
+                            {
+                                alice++;
+                            }
+                            else if (b[i] > a[i])
+                            {
+                                bob++;
+                            }
                         }
-                        else if (b[i] > a[i])
-                        {
-                            bob++;
-                        }
+
+                        scores.Add(alice);
+                        scores.Add(bob);
                     }
 
-                    scores.Add(alice);
-                    scores.Add(bob);
-                }
-
-            return scores;
-        }
-
-        /*
-        Calculate and print the sum of the elements in an array.
-        WARNING: some of those integers may be quite large.
-        */
-        public static long aVeryBigSum(List<long> ar)
-        {
-            long sum = 0;
-
-            for (int i = 0; i < ar.Count; i++)
-                sum += ar[i];
-
-            return sum;
-        }
-
-        /*
-            Given a square matrix, calculate the absolute difference between the sums of its diagonals.
-            Sample:
-            11 2 4
-            4 5 6
-            10 8 -12
-
-            x-diagonal = 11 5 -12 = 4
-            y-diagonal = 4 5 10 = 19
-            abs-result = |4 - 19| = 15
-        */
-        public int diagonalDifference(List<List<int>> arr)
-        {
-            var xdiag = new List<int>();
-            var ydiag = new List<int>();
-            int j = arr.Count - 1;
-            int xtotal = 0;
-            int ytotal = 0;
-
-            for (int i = 0; i < arr.Count; i++)
-            {
-                xdiag.Add(arr[i][i]);
-                ydiag.Add(arr[i][j]);
-                j--;
+                return scores;
             }
 
-            foreach (int sum in xdiag)
-                xtotal += sum;
-            foreach (int sum in ydiag)
-                ytotal += sum;
-
-            return Math.Abs(xtotal - ytotal);
-        }
-
-        /*
-            Given an array of integers, calculate the ratios of its elements 
-            that are positive, negative, and zero. Print the decimal value 
-            of each fraction on a new line with 6 places after the decimal.
-        */
-        public void plusMinus(List<int> arr)
-        {
-            double pos = 0;
-            double neg = 0;
-            double zero = 0;
-            var ratio = new List<double>() { };
-
-            foreach (int i in arr)
+            /*
+            Calculate and print the sum of the elements in an array.
+            WARNING: some of those integers may be quite large.
+            */
+            public static long aVeryBigSum(List<long> ar)
             {
-                if (i > 0)
+                long sum = 0;
+
+                for (int i = 0; i < ar.Count; i++)
+                    sum += ar[i];
+
+                return sum;
+            }
+
+            /*
+                Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+                Sample:
+                11 2 4
+                4 5 6
+                10 8 -12
+
+                x-diagonal = 11 5 -12 = 4
+                y-diagonal = 4 5 10 = 19
+                abs-result = |4 - 19| = 15
+            */
+            public int diagonalDifference(List<List<int>> arr)
+            {
+                var xdiag = new List<int>();
+                var ydiag = new List<int>();
+                int j = arr.Count - 1;
+                int xtotal = 0;
+                int ytotal = 0;
+
+                for (int i = 0; i < arr.Count; i++)
                 {
-                    pos++;
+                    xdiag.Add(arr[i][i]);
+                    ydiag.Add(arr[i][j]);
+                    j--;
                 }
-                else if (0 > i)
+
+                foreach (int sum in xdiag)
+                    xtotal += sum;
+                foreach (int sum in ydiag)
+                    ytotal += sum;
+
+                return Math.Abs(xtotal - ytotal);
+            }
+
+            /*
+                Given an array of integers, calculate the ratios of its elements 
+                that are positive, negative, and zero. Print the decimal value 
+                of each fraction on a new line with 6 places after the decimal.
+            */
+            public void plusMinus(List<int> arr)
+            {
+                double pos = 0;
+                double neg = 0;
+                double zero = 0;
+                var ratio = new List<double>() { };
+
+                foreach (int i in arr)
                 {
-                    neg++;
+                    if (i > 0)
+                    {
+                        pos++;
+                    }
+                    else if (0 > i)
+                    {
+                        neg++;
+                    }
+                    else if (i == 0)
+                    {
+                        zero++;
+                    }
                 }
-                else if (i == 0)
+
+                ratio.Add(pos / arr.Count);
+                ratio.Add(neg / arr.Count);
+                ratio.Add(zero / arr.Count);
+
+                foreach (double i in ratio)
                 {
-                    zero++;
+                    Console.WriteLine(i.ToString("N6"));
+                }
+            }
+            /*
+                Its base and height are both equal to n. It is drawn using # symbols and spaces. 
+                The last line is not preceded by any spaces.
+                Write a program that prints a staircase of size n.
+
+                NOTES: the triangle is right-aligned.
+            */
+            public void staircase(int n)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        if (j < n - i - 1)
+                            Console.Write(" ");
+                        else
+                            Console.Write("#");
+                    }
+                    Console.WriteLine();
                 }
             }
 
-            ratio.Add(pos / arr.Count);
-            ratio.Add(neg / arr.Count);
-            ratio.Add(zero / arr.Count);
+            /*
+                Given five positive integers, find the minimum and maximum values that 
+                can be calculated by summing exactly four of the five integers. Then 
+                print the respective minimum and maximum values as a single line of two 
+                space-separated long integers.
+            */
 
-            foreach (double i in ratio)
+            private string MinSum(List<int> arr)
             {
-                Console.WriteLine(i.ToString("N6"));
-            }
-        }
-        /*
-            Its base and height are both equal to n. It is drawn using # symbols and spaces. 
-            The last line is not preceded by any spaces.
-            Write a program that prints a staircase of size n.
+                var list = arr.ToList(); // copied the params
+                list.RemoveAt(list.Count - 1);
+                int min = 0;
 
-            NOTES: the triangle is right-aligned.
-        */
-        public void staircase(int n)
-        {
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < n; j++)
+                foreach (int x in list)
                 {
-                    if (j < n - i - 1)
-                        Console.Write(" ");
-                    else
-                        Console.Write("#");
+                    min += x;
                 }
-                Console.WriteLine();
+
+                return min.ToString();
             }
+
+            private string MaxSum(List<int> arr)
+            {
+                var list = arr.ToList(); // copied the params
+                list.RemoveAt(0);
+                int max = 0;
+
+                foreach (int x in list)
+                {
+                    max += x;
+                }
+
+                return max.ToString();
+            }
+
+            public void miniMaxSum(List<int> arr)
+            {
+                Console.WriteLine($"{MinSum(arr)} {MaxSum(arr)}");
+            }
+
         }
     }
 }
