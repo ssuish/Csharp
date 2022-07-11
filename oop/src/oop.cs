@@ -1,6 +1,5 @@
 
-
-class Person
+public class Person
 {
     // Object Attributes
     private string _name = "";
