@@ -205,7 +205,7 @@ namespace Hackerrank
 
                 foreach (int x in list)
                 {
-                    max += x;
+                    max = max + x;
                 }
 
                 return max.ToString();
