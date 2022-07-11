@@ -1,3 +1,4 @@
+/*
 
 public class Person
 {
@@ -32,7 +33,7 @@ public class Person
         - internal: accessible from within the assembly
         - protected internal: accessible from within the assembly and derived classes
         - private protected: accessible from within the class and derived classes
-    */
+    
 
     // Constructor Chaining
     public Person(string name, int age) : this(name)
@@ -211,3 +212,5 @@ partial class Worker
         return "Pausing";
     }
 }
+
+*/
