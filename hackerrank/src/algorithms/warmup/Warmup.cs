@@ -183,39 +183,24 @@ namespace Hackerrank
                 space-separated long integers.
             */
 
-            private string MinSum(List<int> arr)
+            private List<int> toSum = new List<int>();
+            
+            private double Sum()
             {
-                var list = arr.ToList(); // copied the params
-                list.RemoveAt(list.Count - 1);
-                int min = 0;
-
-                foreach (int x in list)
+                double sum = 0;
+                for(int i = 0; i < toSum.Count; i++)
                 {
-                    min += x;
+                    sum += toSum[i];
                 }
-
-                return min.ToString();
-            }
-
-            private string MaxSum(List<int> arr)
-            {
-                var list = arr.ToList(); // copied the params
-                list.RemoveAt(0);
-                int max = 0;
-
-                foreach (int x in list)
-                {
-                    max = max + x;
-                }
-
-                return max.ToString();
+                return sum;
             }
 
             public void miniMaxSum(List<int> arr)
             {
-                Console.WriteLine($"{MinSum(arr)} {MaxSum(arr)}");
+                arr.Sort();
+                toSum = arr; 
+                Console.WriteLine($"{Sum() - arr[arr.Count - 1]} {Sum() - arr[0]}");
             }
-
         }
     }
 }
