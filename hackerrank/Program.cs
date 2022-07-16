@@ -1,7 +1,5 @@
 ﻿using Hackerrank.Algorithms;
 
-WarmUp warmUp = new();
+var arr = new List<int>(){7,7,3,3,3,4,4,1,1,7,7};
 
-var arr = new List<int>(){7,69,2,221,8974};
-
-warmUp.miniMaxSum(arr);
+Console.WriteLine(BirthdayCandles.birthdayCakeCandles(arr));
