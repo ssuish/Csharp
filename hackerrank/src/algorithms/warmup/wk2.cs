@@ -38,10 +38,18 @@ class BirthdayCandles
 */
 class TimeConverter
 {
-    
+    private static DateTime unformattedDate = new DateTime();
+
+    private static DateTime TryConvertToDate(string date)
+    {
+        DateTime inputDate;
+        bool isAccepted = DateTime.TryParse(date, out inputDate);
+        return isAccepted ? inputDate : throw new FormatException("Invalid DateTime format.");
+    }
 
     public static string timeConversion(string s)
     {
-        return string.Empty;
+        unformattedDate = TryConvertToDate(s);
+        return unformattedDate.ToString("HH:mm:ss");
     }
 }
