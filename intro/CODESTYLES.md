@@ -47,3 +47,35 @@ public class ExampleEvents
 ---
 
 ## Camel Casing  
+
+- Use camel casing when naming private or internal fields, and prefix them with _ .
+
+```cs
+public class DataService
+{
+    private IWorkerQueue _workerQueue;
+}
+```
+
+- Static fields that are private or internal, use 's_' prefix and for thread static use 't_' .
+
+```cs
+public class DataService
+{
+    private static IWorkerQueue s_workerQueue;
+
+    [ThreadStatic]
+    private static TimeSpan t_timeSpan;
+}
+```
+
+- When writing method parameters, use camel casing.
+
+``` cs
+public T SomeMethod<T>(int someNumber, bool isValid)
+{
+}
+```
+
+---
+
