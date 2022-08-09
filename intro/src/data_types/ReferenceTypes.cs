@@ -1,7 +1,7 @@
 // Reference Types does not contain the actual data stored in a variable. 
 // It only contains a reference to the variables.
 
-class ReferenceType
+class ReferenceTypes
 {
     // Object types can be assigned values of any other types, e.g. value, reference, predefined, user-defined.
 
@@ -54,14 +54,7 @@ class ReferenceType
         NullReferenceException - if unboxing a null.
         InvalidCastException - if unboxing a reference to invalid value type.      
     */
-
-    object objBoxed = 100; // Boxing
-    int objUnboxed = (int)objBoxed; // Unboxing
-
-    // Dynamic Type are similar to object type except that the type checking takes place at runtime.
-    dynamic dBoxed = 100; // Boxing
-    int dUnboxed = (int)dBoxed; // Unboxing
-
+    
     // String Type allows string values to a variable.
     string unquotedStr = "Hello World";
     string quotedStr = @"Hello World";

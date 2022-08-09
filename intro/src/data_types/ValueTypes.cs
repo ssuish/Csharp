@@ -1,4 +1,4 @@
-class DataTypes
+class ValueTypes
 {
     // Value Types - directly contain data. 
     // Boolean Value : true/false
@@ -66,10 +66,4 @@ class DataTypes
     ushort defUshort = 0;
     ushort maxUshort = ushort.MaxValue;
     ushort minUshort = ushort.MinValue;
-    
-    // ================================
-
-    // Reference Type
-    
-
 }

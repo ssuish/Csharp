@@ -7,7 +7,6 @@ Basic.Program.ReplyMsg(); // Prints Hello World from ReplyMsg method from class 
 // Declare programs to run here:
 
 
-int wk = int.TryParse(Ci);
 
 
 // ============================================
