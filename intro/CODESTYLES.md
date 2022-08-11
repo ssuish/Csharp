@@ -79,3 +79,36 @@ public T SomeMethod<T>(int someNumber, bool isValid)
 
 ---
 
+## Layout Conventions
+
+Good layout uses formatting to emphasize the structure of your code and to make the code easier to read.
+
+- Use the default code editor settings.
+
+- Write only one statement per line.
+
+- Write only one declaration per line.
+
+- If continuation lines are not indented automatically, indent them one tab stop (four spaces).
+
+- Add at least one blank line between method definitions and property definitions.
+
+- Use parenthesis to make clauses in an expression apparent, as shown in the following code.
+
+---
+
+## Commenting Convention
+
+- Place the comment on a seperate line, not at the end of line.
+
+- Being comment text with uppercase letter.
+
+- End comment with a period.
+
+- Insert one space between comment delimiter and the comment text.
+
+- Don't create formatted blocks of asterisk around comments.
+
+- Ensure all public members have necessary XML components providing appropriate description about their behavior.
+
+---
